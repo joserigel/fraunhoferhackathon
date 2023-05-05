@@ -72,7 +72,7 @@ def process_images_in_folder(input_folder_path, output_folder_path):
             cv2.imwrite(output_path, img)
 
 
-img = cv2.imread('your_image.png', cv2.IMREAD_ANYDEPTH)
+img = cv2.imread('test.tif', cv2.IMREAD_ANYDEPTH)
 squares = find_squares(img)
 
 # Draw all detected squares on the original image
