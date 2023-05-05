@@ -1,5 +1,4 @@
 import cv2 as cv
-import PIL
 import numpy as np
 
 import glob
@@ -40,10 +39,14 @@ for filename in glob.glob(input_folder_path + '/*.tif'):
     
     #cropped_image = cv.cvtColor(cropped_image, cv.COLOR_GRAY2RGB)
     cropped_image = cv.bitwise_not(cropped_image)
+    #Top
     cropped_image = cv.rectangle(cropped_image, (0, 0), (1500, 80), 0, -1)
-    cropped_image = cv.rectangle(cropped_image, (0, 370), (15000, 4500), 0, -1)
-    cropped_image = cv.rectangle(cropped_image, (0, 0), (70, 4500), 0, -1)
-    cropped_image = cv.rectangle(cropped_image, (1260, 0), (15000, 4500), 0, -1)
+    #Bottom
+    cropped_image = cv.rectangle(cropped_image, (0, 380), (15000, 4500), 0, -1)
+    #Left
+    cropped_image = cv.rectangle(cropped_image, (0, 0), (80, 4500), 0, -1)
+    #Right
+    cropped_image = cv.rectangle(cropped_image, (1270, 0), (15000, 4500), 0, -1)
     #grid_area = cropped_image[65:390, 70:1267]
     contours, heirarchy = cv.findContours(cropped_image, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
     cropped_image = cv.cvtColor(cropped_image, cv.COLOR_GRAY2RGB)
@@ -53,4 +56,4 @@ for filename in glob.glob(input_folder_path + '/*.tif'):
 
 
     cv.imshow('image', cropped_image)
-    cv.waitKey(10)
+    cv.waitKey(50)
