@@ -23,11 +23,11 @@ min_val, max_val, min_loc, max_loc = cv.minMaxLoc(bound)
 
 # 1185x312 dimension of grid area template
 top_left = min_loc
-bottom_right = (top_left[0] + 1185, top_left[1] + 312)
+top_left = (top_left[0] + 10, top_left[1] + 10)
+bottom_right = (top_left[0] + 1160, top_left[1] + 280)
 print(top_left)
-cv.rectangle(cropped_image,top_left, bottom_right, 255, 2)
+cv.rectangle(cropped_image,top_left, bottom_right, (255, 0, 0), 2)
 
-
-cv.imshow('image', cropped_image)
+cv.imshow('image', cv.convertScaleAbs(cropped_image)/16)
 cv.rectangle(img,top_left, bottom_right, 255, 2)
 cv.waitKey(0)
