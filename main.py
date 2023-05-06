@@ -43,17 +43,25 @@ for filename in glob.glob(input_folder_path + '/*.tif'):
     kernel_size = 9
     blur_gray = cv2.GaussianBlur(img , (kernel_size, kernel_size), 0)
 
+    #plt.imshow(blur_gray)
+    #plt.show()
+
 
     blur_gray = cv2.adaptiveThreshold(cv2.convertScaleAbs(blur_gray / 16),255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,\
             cv2.THRESH_BINARY,31,2)
 
+    #plt.imshow(blur_gray)
+    #plt.show()
 
     contour, hier = cv2.findContours(blur_gray, cv2.RETR_CCOMP, cv2.CHAIN_APPROX_SIMPLE)
 
     for cnt in contour:
         cv2.drawContours(blur_gray, [cnt], 0, 255, -1)
 
+    blur_gray = remove_small_regions(blur_gray, 60)
 
+    #plt.imshow(blur_gray)
+    #plt.show()
 
 
 
@@ -61,6 +69,8 @@ for filename in glob.glob(input_folder_path + '/*.tif'):
     high_threshold = 255
     edges = cv2.Canny(blur_gray, low_threshold, high_threshold)
 
+    #plt.imshow(edges)
+    #plt.show()
 
 
 
@@ -88,11 +98,7 @@ for filename in glob.glob(input_folder_path + '/*.tif'):
     #cv2.waitKey()
 
     result = remove_small_regions(removed_lines,60)
-
     line_mask = cv2.bitwise_not(result)
-
-
-
     line_mask = remove_small_regions(line_mask, 60)
 
     # Creating kernel
@@ -101,15 +107,15 @@ for filename in glob.glob(input_folder_path + '/*.tif'):
     # Using cv2.erode() method
     line_mask = cv2.erode(line_mask, kernel)
 
-    deadzone_y = 30
-    deadzon_x = 100
+    deadzone_y = 0
+    deadzon_x = 0
 
-    line_mask[0:deadzone_y,:] = 0
-    line_mask[-deadzone_y:-1,:] = 0
+    #line_mask[0:deadzone_y,:] = 0
+    #line_mask[-deadzone_y:-1,:] = 0
 
 
-    line_mask[:,0:deadzon_x] = 0
-    line_mask[:,-deadzon_x:-1] = 0
+    #line_mask[:,0:deadzon_x] = 0
+    #line_mask[:,-deadzon_x:-1] = 0
 
 
     backtorgb = cv2.cvtColor(line_mask, cv2.COLOR_GRAY2RGB)
@@ -118,7 +124,8 @@ for filename in glob.glob(input_folder_path + '/*.tif'):
 
     added_image = cv2.addWeighted(cv2.cvtColor(cv2.convertScaleAbs(img /16),cv2.COLOR_GRAY2RGB), 0.8, backtorgb, 0.3, 0)
 
-
+    #cv2.imshow('image', added_image)
+    #cv2.waitKey(100)
 
     line_mask_red = line_mask / 255
     residual = np.multiply(line_mask_red,img)
@@ -132,8 +139,7 @@ for filename in glob.glob(input_folder_path + '/*.tif'):
 
 
 
-    #cv2.imshow('image', cv2.convertScaleAbs(residual /16))
-    #cv2.waitKey(100)
+
 
 
 plt.hist(np.concatenate(numbers).ravel(), density=False, bins=4095)  # density=False would make counts
