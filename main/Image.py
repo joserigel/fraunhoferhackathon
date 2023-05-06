@@ -4,7 +4,7 @@ import os
 import numpy as np
 
 Mat = np.ndarray[int, np.dtype[np.generic]]
-
+import glob
 
 class Image:
     def __init__(self, filename: str):
@@ -102,23 +102,27 @@ class Image:
     def detect_side_tb(self, isBottom: bool):
         mask = None
         if (isBottom):
-            mask = cv.imread("asset/top_template.png", cv.IMREAD_UNCHANGED)
+            mask = cv.imread("asset/top_template_nt.png", cv.IMREAD_UNCHANGED)
         else:
-            mask = cv.imread("asset/top_template.png", cv.IMREAD_UNCHANGED)
+            mask = cv.imread("asset/bottom_template_nt.png", cv.IMREAD_UNCHANGED)
 
-        pic = self.crop_image_8_bit[:32, 78:-77]
+        pic = self.crop_image_8_bit[5:20, 78:-77]
 
         if isBottom:
-            pic = self.crop_image_8_bit[-32:, 78:-77]
+            pic = self.crop_image_8_bit[-20:-5, 78:-77]
 
         # blurs template to remove small spots
-        pic = cv.GaussianBlur(pic, (3, 3), 0)
+        #pic = cv.GaussianBlur(pic, (1, ), 0)
         # make picture brighter
-        pic = cv.convertScaleAbs(pic, 0.5, 10)
+        pic = cv.GaussianBlur(pic, (5, 5), 0)
+        pic = cv.convertScaleAbs(pic, 1, 5)
+        pic = cv.addWeighted(pic, 3, pic, 0, 10)
+        
+        
+        pic = np.invert(pic)
         pic = cv.cvtColor(pic, cv.COLOR_GRAY2RGBA)
-        mask = mask[:32,:1183]
-        print(self.get_dim(mask))
-        print(self.get_dim(pic))
+        mask = mask[:15,:1183]
+        #mask = cv.GaussianBlur(mask, (5, 5), 0)
         
         pic = cv.subtract(pic, mask)
 
@@ -126,19 +130,29 @@ class Image:
         mean = np.nanmean(arr)
         std = np.nanstd(arr)
 
-        anomalies = (np.abs(arr - mean) / std >= 2.0).any(axis=2)
+        anomalies = (np.abs(arr - mean) / std >= 1.05).any(axis=2)
         mask_u8 = anomalies.astype(np.uint8) * 255
         mask_u8 = cv.cvtColor(mask_u8, cv.COLOR_GRAY2RGB)
         if isBottom:
             mask = cv.imread("asset/top_template_nt.png", cv.IMREAD_COLOR)
         else:
-            mask = cv.imread("asset/top_template_nt.png", cv.IMREAD_COLOR)
-        mask = mask[:32,:1183]
+            mask = cv.imread("asset/bottom_template_nt.png", cv.IMREAD_COLOR)
+        mask = mask[:15,:1183]
+        mask = cv.GaussianBlur(mask, (9, 9), 0)
+        ret, mask = cv.threshold(mask, 100, 255, cv.THRESH_BINARY)
         mask = cv.bitwise_not(mask)
         #remove blankspaces again
         mask_u8 = cv.bitwise_and(mask_u8, mask)
+        
+        shapes = np.zeros((15, 1183, 3), np.uint8)
+        mask_u8 = cv.cvtColor(mask_u8, cv.COLOR_RGB2GRAY)
+        ret, thresh = cv.threshold(mask_u8, 100, 255, cv.THRESH_BINARY)
+        contours, hierarchy = cv.findContours(thresh, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
+        contours = [c for c in contours if cv.contourArea(c) > 32]
+        
+        cv.drawContours(shapes, contours, -1, color=(255, 255, 255), thickness=cv.FILLED)
 
-        return mask
+        return shapes
 
     def detect_side_lr(self, isLeft: bool):
         # todo
@@ -181,7 +195,7 @@ class Image:
         mask = cv.bitwise_not(mask)
         # remove blankspaces again
         mask_u8 = cv.bitwise_and(mask_u8, mask)
-        return mask
+        return mask_u8
 
     @staticmethod
     def check_area(img):
@@ -232,6 +246,8 @@ class Image:
     def teeth_detect(self):
         top_side = self.detect_side_tb(False)
         bottom_side = self.detect_side_tb(True)
+
+        return (top_side, bottom_side)
 
         if self.defect_valid(top_side):
             top_side = self.check_area(top_side)
@@ -284,15 +300,24 @@ class Image:
 
 if __name__ == "__main__":
 
-    image_directory = ""
-    output_directory = ""
-    test = Image('test\cam1_0013190202125642302.tif')
-    cv.imshow("Left", test.blackspot['left'])
-    cv.waitKey(0)
-    cv.imshow("Right", test.blackspot['right'])
-    cv.waitKey(0)
-    cv.imshow("top", test.teeth['top'])
-    cv.waitKey(0)
-    cv.imshow("bottom", test.teeth['bottom'])
-    cv.waitKey(0)
-    cv.destroyAllWindows()
+    
+    input_folder_path = '../PrePro/teeth_defect'
+    output_folder_path = './PrePro/output'
+
+    i = 0
+    for filename in glob.glob(input_folder_path + '/*.tif'):
+        test = Image(filename)
+        cv.imshow("top", test.teeth['top'])
+        cv.waitKey(10)
+    # image_directory = ""
+    # output_directory = ""
+    # test = Image('test.tif')
+    # cv.imshow("Left", test.blackspot['left'])
+    # cv.waitKey(0)
+    # cv.imshow("Right", test.blackspot['right'])
+    # cv.waitKey(0)
+    # cv.imshow("top", test.teeth['top'])
+    # cv.waitKey(0)
+    # cv.imshow("bottom", test.teeth['bottom'])
+    # cv.waitKey(0)
+    # cv.destroyAllWindows()
