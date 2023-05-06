@@ -2,12 +2,14 @@ import cv2 as cv
 import matplotlib.pyplot as plt
 import os
 import numpy as np
+from scipy import ndimage,datasets
+from scipy.signal import find_peaks
 
 Mat = np.ndarray[int, np.dtype[np.generic]]
 
 
 class Image:
-    def __init__(self, filename: str):
+    def __init__(self, filename: str,grid_threshold=80000000):
         self.cwd = os.getcwd()
         self.filename = filename
         self.image_8_bit = self.load_image(is_8bit=True)
@@ -18,16 +20,24 @@ class Image:
         # blackspot
         blackspot = self.blackspot_detect()
         self.blackspot = {
-            "right": blackspot[0],
-            "left": blackspot[1]
+            "right": np.sum(blackspot[0],axis=2),
+            "left": np.sum(blackspot[1],axis=2)
         }
 
         # teeth
         teeth = self.teeth_detect()
         self.teeth = {
-            "top": teeth[0],
-            "bottom": teeth[1]
+            "top": np.sum(teeth[0],axis=2),
+            "bottom": np.sum(teeth[1],axis=2)
         }
+        
+        
+        
+        
+        
+        self.grid = self.grid_detect()
+        
+        self.processed_image = self.combine_image()
 
     def load_image(self, is_8bit=False) -> Mat:
         """
@@ -47,11 +57,11 @@ class Image:
         """
                 crop to the whole blade
         """
-        template = cv.imread(os.path.join(
-            self.cwd, 'asset\\cropped_manual.tif'), cv.IMREAD_GRAYSCALE)
+        template = cv.imread(os.path.join(self.cwd, 'asset\\cropped_manual.tif'), cv.IMREAD_GRAYSCALE)
         res = cv.matchTemplate(image, template, cv.TM_SQDIFF_NORMED)
         min_val, max_val, min_loc, max_loc = cv.minMaxLoc(res)
         top_left = min_loc
+        
         cropped_image = image[top_left[1]:(
             top_left[1] + 445), top_left[0]:(top_left[0] + 1338)]
         return cropped_image, top_left
@@ -60,8 +70,7 @@ class Image:
         """
                 Crop Grid from the image
         """
-        cropped_image = self.image_12_bit[top_left[1]:(
-            top_left[1] + 445), top_left[0]:(top_left[0] + 1338)]
+        cropped_image = self.image_12_bit[top_left[1]:(top_left[1] + 445), top_left[0]:(top_left[0] + 1338)]
         template_grid = cv.imread(os.path.join(
             self.cwd, 'asset/cropped_grid_area.tif'), cv.IMREAD_GRAYSCALE)
         bound = cv.matchTemplate(
@@ -69,7 +78,6 @@ class Image:
         min_val, max_val, min_loc, max_loc = cv.minMaxLoc(bound)
         top_left = min_loc
         top_left = (top_left[0] + 10, top_left[1] + 10)
-        bottom_right = (top_left[0] + 1160, top_left[1] + 280)
 
         cropped_image = cropped_image[65:-65, 78:-80]
 
@@ -117,8 +125,6 @@ class Image:
         pic = cv.convertScaleAbs(pic, 0.5, 10)
         pic = cv.cvtColor(pic, cv.COLOR_GRAY2RGBA)
         mask = mask[:32,:1183]
-        print(self.get_dim(mask))
-        print(self.get_dim(pic))
         
         pic = cv.subtract(pic, mask)
 
@@ -199,6 +205,82 @@ class Image:
             return img
         else:
             return np.empty_like(img)
+        
+    def scan_line(self,blured,image):
+        full_img_45_blurred = ndimage.rotate(blured, 45, reshape=True)
+        full_img_45 = ndimage.rotate(image, 45, reshape=True)*0
+        
+        image_size = self.get_dim(full_img_45_blurred)
+        
+        y_sum = np.sum(full_img_45_blurred,0)
+        x_sum = np.sum(full_img_45_blurred,1)
+        valleys_y, _ = find_peaks(-y_sum, distance=10, prominence=50000)
+        valleys_x, _ = find_peaks(-x_sum, distance=10, prominence=50000)
+        for i in valleys_x:
+            cv.line(full_img_45, (0, i), (image_size[0],i) , 255, 1)
+
+
+        for i in valleys_y:
+            cv.line(full_img_45, ( i,0), (i,image_size[0]) , 255, 1)
+            
+        full_img_45_done = ndimage.rotate(full_img_45, -45, reshape=True)[590:904+1,158:1338]
+        _, full_img_45_done_thresh = cv.threshold(full_img_45_done, 127, 4095, cv.THRESH_BINARY)
+        full_img_45_done_thresh = cv.convertScaleAbs(full_img_45_done_thresh)
+        return full_img_45_done_thresh
+    
+    
+    def grid_detect(self):
+        img = self.crop_image_12_bit
+        kernel_size = 11
+        blur_gray = cv.GaussianBlur(img , (kernel_size, kernel_size), 0)
+        
+        line_mask = self.scan_line(blur_gray,img)
+        
+        img = img[40:-40,80:-80]
+        line_mask= line_mask[40:-40,80:-80]
+        img_median_blurred = img
+        
+        maske_arr = np.array(line_mask, dtype=bool)
+        mx_only_squares = np.ma.masked_array(img_median_blurred, mask=maske_arr)
+        data = mx_only_squares[mx_only_squares.mask == False]
+        
+        std_dev = np.std(data)
+        av = np.average(data)
+        
+        maske_arr = np.invert(np.array(line_mask, dtype=bool))
+        mx = np.ma.masked_array(img_median_blurred, mask=maske_arr)
+        data = mx[mx.mask == False]
+        
+        res = np.count_nonzero(data > av-0.5*std_dev)
+
+        maske_arr = np.array(line_mask, dtype=bool)
+        raw = np.multiply(maske_arr, img)
+
+        heat = np.array( (raw > av-0.5*std_dev)*255, dtype=np.uint8)
+
+        kernel = np.ones((3, 3), np.uint8)
+        img_dilation = cv.dilate(heat, kernel, iterations=1)
+        img_dilation_border = cv.dilate(heat, kernel, iterations=3)
+
+        img_dilation = np.subtract(img_dilation_border,img_dilation)
+
+        return img_dilation
+    
+    @staticmethod
+    def remove_small_regions(image,thresh):
+    # do connected components processing
+        nlabels, labels, stats, centroids = cv.connectedComponentsWithStats(image, None, None, None, 4, cv.CV_32S)
+
+        # get CC_STAT_AREA component as stats[label, COLUMN]
+        areas = stats[1:, cv.CC_STAT_AREA]
+
+        result = np.zeros((labels.shape), np.uint8)
+
+        for i in range(0, nlabels - 1):
+            if areas[i] >= thresh:  # keep
+                result[labels == i + 1] = 255
+
+        return result
 
     @staticmethod
     def defect_valid(img):
@@ -246,38 +328,36 @@ class Image:
         return img.shape[:2]
 
     def combine_image(self):
-        vis = np.zeros((), np.uint8)
-        vertical = cv.vconcat([self.top, self.grid, self.bottom])
-        res = cv.hconcat(
-            [self.blackspot['right'], vertical, self.blackspot['left']])
-        return res
-
-    def combine_image_np(self):
         dim_left = self.get_dim(self.blackspot['left'])
         dim_right = self.get_dim(self.blackspot['right'])
 
-        dim_top = self.get_dim(self.blackspot['right'])
-        dim_grid = self.get_dim(self.blackspot['right'])
-        dim_bottom = self.get_dim(self.blackspot['right'])
+        dim_top = self.get_dim(self.teeth['top'])
+        dim_grid = self.get_dim(self.grid)
+        dim_bottom = self.get_dim(self.teeth['bottom'])
 
-        # create zeros array of image size
-        vis = np.zeros((
-            max(dim_top[0]+dim_bottom[0]+dim_grid[0],
-                max(dim_left[0], dim_right[0])),
+        array_size = (
+                max(dim_left[0], dim_right[0]),
             dim_left[1]+dim_right[1] +
             max(dim_grid[1], dim_top[1], dim_bottom[1])
-        ), np.uint8)
+        )
+        # create zeros array of image size
+        offset = ((array_size[0]-(dim_top[0]+dim_top[0]+dim_grid[0]))//2,
+                  (array_size[1]-(dim_left[0]+dim_grid[0]+dim_right[0]))//2)
+        
+        vis = np.zeros((2*dim_top[0]+dim_grid[0]+2*offset[0],dim_right[1]+dim_left[1]+dim_grid[1]+2*offset[1]), np.uint8)
+        
 
         vis[:dim_left[0], :dim_left[1]] = self.blackspot['left']
 
-        vis[:dim_top[0], dim_left[1]:dim_left[1]+dim_top[1]] = self.top
+        vis[:dim_top[0], dim_left[1]:dim_left[1]+dim_top[1]] = self.teeth['top']
 
-        vis[dim_top[0]:dim_top[0]+dim_grid[0],
-            dim_left[1]:dim_left[1]+dim_grid[1]] = self.grid
-        vis[dim_top[0]+dim_grid[0]:dim_top[0]+dim_grid[0]+dim_bottom[0],
-            dim_left[1]:dim_left[1]+dim_bottom[1]] = self.bottom
+        vis[dim_top[0]+offset[0]:dim_top[0]+offset[0]+dim_grid[0],
+            dim_left[1]+offset[1]:dim_left[1]+offset[1]+dim_grid[1]] = self.grid
+        
+        vis[dim_top[0]+offset[0]+dim_grid[0]+offset[0]:dim_top[0]+offset[0]+dim_grid[0]+offset[0]+dim_bottom[0],
+            dim_left[1]:dim_left[1]+dim_bottom[1]] = self.teeth['bottom']
 
-        vis[:dim_right[0], dim_left[1]+dim_bottom[1]:] = self.blackspot['right']
+        vis[:dim_right[0], dim_left[1]+offset[1]+dim_grid[1]+offset[1]:] = self.blackspot['right']
 
         return vis
 
@@ -286,13 +366,7 @@ if __name__ == "__main__":
 
     image_directory = ""
     output_directory = ""
-    test = Image('test\cam1_0013190202125642302.tif')
-    cv.imshow("Left", test.blackspot['left'])
+    test = Image('test\\teeth2.tif')
+    cv.imshow("",test.processed_image)
     cv.waitKey(0)
-    cv.imshow("Right", test.blackspot['right'])
-    cv.waitKey(0)
-    cv.imshow("top", test.teeth['top'])
-    cv.waitKey(0)
-    cv.imshow("bottom", test.teeth['bottom'])
-    cv.waitKey(0)
-    cv.destroyAllWindows()
+    cv.destroyAllWindow()
