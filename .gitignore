@@ -2,3 +2,6 @@
 env/
 PrePro/input/
 PrePro/output
+
+# Lennard specific
+test/
