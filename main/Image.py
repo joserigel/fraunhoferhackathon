@@ -16,10 +16,17 @@ class Image:
         self.crop_image_12_bit = self.crop_grid(top_left)
 
         # blackspot
-        res = self.blackspot_detect()
+        blackspot = self.blackspot_detect()
         self.blackspot = {
-            "right": res[0],
-            "left": res[1]
+            "right": blackspot[0],
+            "left": blackspot[1]
+        }
+
+        # teeth
+        teeth = self.teeth_detect()
+        self.teeth = {
+            "top": teeth[0],
+            "bottom": teeth[1]
         }
 
     def load_image(self, is_8bit=False) -> Mat:
@@ -91,31 +98,45 @@ class Image:
                 result[labels == i + 1] = 255
 
         return result
-    
+
     def detect_side_tb(self, isBottom: bool):
         mask = None
         if (isBottom):
-            mask = cv.imread("left_template.png", cv.IMREAD_UNCHANGED)
+            mask = cv.imread("asset/top_template.png", cv.IMREAD_UNCHANGED)
         else:
-            mask = cv.imread("top_template.png", cv.IMREAD_UNCHANGED)
+            mask = cv.imread("asset/top_template.png", cv.IMREAD_UNCHANGED)
 
         pic = self.crop_image_8_bit[:32, 78:-77]
-        
+
         if isBottom:
             pic = self.crop_image_8_bit[-32:, 78:-77]
 
-        #blurs template to remove small spots
+        # blurs template to remove small spots
         pic = cv.GaussianBlur(pic, (3, 3), 0)
-        #make picture brighter
+        # make picture brighter
         pic = cv.convertScaleAbs(pic, 0.5, 10)
         pic = cv.cvtColor(pic, cv.COLOR_GRAY2RGBA)
-        #remove blank space with mask 
-        pic = cv.subtract(pic, mask)
+        mask = mask[:32,:1183]
+        print(self.get_dim(mask))
+        print(self.get_dim(pic))
         
+        pic = cv.subtract(pic, mask)
 
-        arr = np.where(pic==0, np.nan, pic)
+        arr = np.where(pic == 0, np.nan, pic)
         mean = np.nanmean(arr)
         std = np.nanstd(arr)
+
+        anomalies = (np.abs(arr - mean) / std >= 2.0).any(axis=2)
+        mask_u8 = anomalies.astype(np.uint8) * 255
+        mask_u8 = cv.cvtColor(mask_u8, cv.COLOR_GRAY2RGB)
+        if isBottom:
+            mask = cv.imread("asset/top_template_nt.png", cv.IMREAD_COLOR)
+        else:
+            mask = cv.imread("asset/top_template_nt.png", cv.IMREAD_COLOR)
+        mask = mask[:32,:1183]
+        mask = cv.bitwise_not(mask)
+        #remove blankspaces again
+        mask_u8 = cv.bitwise_and(mask_u8, mask)
 
         return mask
 
@@ -208,6 +229,18 @@ class Image:
             left_side = self.check_area(left_side)
         return (right_side, left_side)
 
+    def teeth_detect(self):
+        top_side = self.detect_side_tb(False)
+        bottom_side = self.detect_side_tb(True)
+
+        if self.defect_valid(top_side):
+            top_side = self.check_area(top_side)
+
+        if self.defect_valid(bottom_side):
+            bottom_side = self.check_area(bottom_side)
+
+        return (top_side, bottom_side)
+
     @staticmethod
     def get_dim(img):
         return img.shape[:2]
@@ -243,9 +276,9 @@ class Image:
             dim_left[1]:dim_left[1]+dim_grid[1]] = self.grid
         vis[dim_top[0]+dim_grid[0]:dim_top[0]+dim_grid[0]+dim_bottom[0],
             dim_left[1]:dim_left[1]+dim_bottom[1]] = self.bottom
-        
-        vis[:dim_right[0],dim_left[1]+dim_bottom[1]:] = self.blackspot['right']
-        
+
+        vis[:dim_right[0], dim_left[1]+dim_bottom[1]:] = self.blackspot['right']
+
         return vis
 
 
@@ -253,11 +286,13 @@ if __name__ == "__main__":
 
     image_directory = ""
     output_directory = ""
-    test = Image('test.tif')
-    print(Image.get_dim(test.image_8_bit))
-    # right, left = test.blackspot_detect()
-    # cv.imshow("Left",left)
-    # cv.waitKey(0)
-    # cv.imshow("Right",right)
-    # cv.waitKey(0)
-    # cv.destroyAllWindows()
+    test = Image('test\cam1_0013190202125642302.tif')
+    cv.imshow("Left", test.blackspot['left'])
+    cv.waitKey(0)
+    cv.imshow("Right", test.blackspot['right'])
+    cv.waitKey(0)
+    cv.imshow("top", test.teeth['top'])
+    cv.waitKey(0)
+    cv.imshow("bottom", test.teeth['bottom'])
+    cv.waitKey(0)
+    cv.destroyAllWindows()
