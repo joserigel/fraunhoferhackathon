@@ -2,6 +2,7 @@
 env/
 PrePro/input/
 PrePro/output
+__pycache__/
 
 # Lennard specific
 test/
