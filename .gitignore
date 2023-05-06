@@ -8,3 +8,6 @@ PrePro/output
 # Lennard specific
 test/
 PrePro/precropped/
+imgs/
+*.png
+*.tif
