@@ -301,7 +301,7 @@ class Image:
 if __name__ == "__main__":
 
     
-    input_folder_path = '../PrePro/teeth_defect'
+    input_folder_path = './PrePro/input'
     output_folder_path = './PrePro/output'
 
     i = 0
