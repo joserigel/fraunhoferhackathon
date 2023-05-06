@@ -40,27 +40,24 @@ def preprocess_data(tif_folder, csv_file):
 main_folder = r'C:\Users\david\Desktop\data'
 tif_folder = main_folder+r'\train'
 csv_file = r'C:\Users\david\Desktop\data\labels_train.csv'
+counts_file = main_folder+r'\hist_counts.npy'
 
 preprocessed_data = preprocess_data(tif_folder, csv_file)
 
+res = []
 
-good=[]
-bad = []
-
-
-refernce_grid = np.load(main_folder+r'\match_grid.out.npy')
 
 for i in tqdm(preprocessed_data):
-    if i["label"] == "good":
-        good.append(analyze_grid(i["path"],main_folder, refernce_grid ))
+    res.append(analyze_grid(i["path"], main_folder) )
+    print(i["label"])
 
-    #if i["label"] == "black_defect":
-    #    bad.append(analyze_grid(i["path"],main_folder, refernce_grid  ))
+np.save(counts_file,res)
 
-fig, (ax1, ax2) = plt.subplots(1,2, sharex=True, sharey=True)
+counts = np.load(counts_file)
+
+fig, (ax1) = plt.subplots(1,1, sharex=True, sharey=True)
 fig.suptitle('Vertically stacked subplots')
-ax1.hist(np.concatenate(good).ravel(), density=True, bins=1000)  # density=False would make counts
-ax2.hist(np.concatenate(bad).ravel(), density=True, bins=1000)  # density=False would make counts
+ax1.hist(counts, density=True, bins=200)  # density=False would make counts
 
 plt.show()
 
