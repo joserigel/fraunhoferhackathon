@@ -6,7 +6,6 @@ import cv2 as cv
 
 
 
-
 """
 detects white markings that represent errors in the printing.  
 """
@@ -14,19 +13,14 @@ def detect_error(filename):
     image = Image.open(filename)
     image = np.array(image)
 
-    colors, counts = np.unique(image.reshape(-1, image.shape[-1]), axis=0, return_counts=True)
-    colors =[list(color) for color in colors] 
-    threshold= 230
-    count = 0
-    for i in colors:
-        if i[0]  >threshold and i[2] >threshold and i[1]>threshold:
-            count+=1
-    if  count>0 : 
-            return True
+    threshold=200
+    white_pixels = np.count_nonzero(image > threshold)  # count white pixels
+    if white_pixels:
+        return True
     return False
 
 
-files  = ["blacktest2.png", "black.png"]
+files  = [".png"]
 
 for f in files: 
     print(detect_error(f))
