@@ -7,13 +7,13 @@ Mat = np.ndarray[int, np.dtype[np.generic]]
 
 
 class Image:
-
     def __init__(self, filename: str):
+        self.cwd = os.getcwd()
         self.filename = filename
         self.image_8_bit = self.load_image(is_8bit=True)
         self.image_12_bit = self.load_image()
         self.crop_image_8_bit,top_left = self.crop(self.image_8_bit)
-        self.crop_image_12_bit = self.crop_grid(self.image_12_bit,self.crop_image_8_bit,top_left)
+        self.crop_image_12_bit = self.crop_grid(top_left)
         
         #blackspot
         res = self.blackspot_detect()
@@ -40,20 +40,20 @@ class Image:
         """
                 crop to the whole blade
         """
-        template = cv.imread('asset/cropped_manual.tif', cv.IMREAD_GRAYSCALE)
+        template = cv.imread(os.path.join(self.cwd,'asset/cropped_manual.tif'), cv.IMREAD_GRAYSCALE)
         res = cv.matchTemplate(image, template, cv.TM_SQDIFF_NORMED)
         min_val, max_val, min_loc, max_loc = cv.minMaxLoc(res)
         top_left = min_loc
         cropped_image = image[top_left[1]:(top_left[1] + 445), top_left[0]:(top_left[0] + 1338)]
         return cropped_image, top_left
 
-    def crop_grid(self, image_12_bit: Mat, cropped_image_8bit: Mat, top_left) -> Mat:
+    def crop_grid(self, top_left) -> Mat:
         """
                 Crop Grid from the image
         """
-        cropped_image = image_12_bit[top_left[1]:(top_left[1] + 445), top_left[0]:(top_left[0] + 1338)]
-        template_grid = cv.imread('asset/cropped_grid_area.tif', cv.IMREAD_GRAYSCALE)
-        bound = cv.matchTemplate(cropped_image_8bit, template_grid, cv.TM_SQDIFF_NORMED)
+        cropped_image = self.image_12_bit[top_left[1]:(top_left[1] + 445), top_left[0]:(top_left[0] + 1338)]
+        template_grid = cv.imread(os.path.join(self.cwd,'asset/cropped_grid_area.tif'), cv.IMREAD_GRAYSCALE)
+        bound = cv.matchTemplate(self.crop_image_8_bit, template_grid, cv.TM_SQDIFF_NORMED)
         min_val, max_val, min_loc, max_loc = cv.minMaxLoc(bound)
         top_left = min_loc
         top_left = (top_left[0] + 10, top_left[1] + 10)
@@ -63,6 +63,7 @@ class Image:
 
         return cropped_image
 
+    @staticmethod
     def show_image(image: Mat) -> None:
         """
                 show Image
@@ -71,7 +72,8 @@ class Image:
         cv.waitKey(0)
         cv.destroyAllWindows()
 
-    def remove_small_regions(self, image, thresh: int):
+    @staticmethod
+    def remove_small_regions(image, thresh: int):
         # todo
         nlabels, labels, stats, centroids = cv.connectedComponentsWithStats(
             image, None, None, None, 4, cv.CV_32S)
@@ -89,9 +91,9 @@ class Image:
         # todo
         mask = None
         if isLeft:
-            mask = cv.imread("asset/left_template.png", cv.IMREAD_UNCHANGED)
+            mask = cv.imread(os.path.join(self.cwd,"asset/left_template.png"), cv.IMREAD_UNCHANGED)
         else:
-            mask = cv.imread("asset/right_template.png", cv.IMREAD_UNCHANGED)
+            mask = cv.imread(os.path.join(self.cwd,"asset/right_template.png"), cv.IMREAD_UNCHANGED)
 
 
         pic = self.crop_image_8_bit[:, -68:-5]
@@ -117,16 +119,17 @@ class Image:
         mask_u8 = anomalies.astype(np.uint8) * 255
         mask_u8 = cv.cvtColor(mask_u8, cv.COLOR_GRAY2RGB)
         if isLeft:
-            mask = cv.imread("asset/left_template_nt.png", cv.IMREAD_COLOR)
+            mask = cv.imread(os.path.join(self.cwd,"asset/left_template_nt.png"), cv.IMREAD_COLOR)
         else:
-            mask = cv.imread("asset/right_template_nt.png", cv.IMREAD_COLOR)
+            mask = cv.imread(os.path.join(self.cwd,"asset/right_template_nt.png"), cv.IMREAD_COLOR)
         mask = mask[:445, :63]
         mask = cv.bitwise_not(mask)
         #remove blankspaces again
         mask_u8 = cv.bitwise_and(mask_u8, mask)
         return mask
 
-    def check_area(self,img):
+    @staticmethod
+    def check_area(img):
         gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
         ret, thresh = cv.threshold(gray, 127, 255, 0)
         contours, hierarchy = cv.findContours(
@@ -142,7 +145,8 @@ class Image:
         else:
             return np.empty_like(img)
 
-    def defect_valid(self,img):
+    @staticmethod
+    def defect_valid(img):
         gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
         ret, thresh = cv.threshold(gray, 127, 255, 0)
         contours, hierarchy = cv.findContours(thresh, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
@@ -171,9 +175,10 @@ class Image:
         
 
 if __name__ == "__main__":
+    
     image_directory = ""
     output_directory = ""
-    test = Image('test.tif')
+    test = Image('cam1_0013190202141556102.tif')
     right, left = test.blackspot_detect()
     cv.imshow("Left",left)
     cv.waitKey(0)
