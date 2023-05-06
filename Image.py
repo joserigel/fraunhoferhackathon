@@ -138,7 +138,7 @@ class Image:
         #remove blankspaces again
         mask_u8 = cv.bitwise_and(mask_u8, mask)
 
-        return mask
+        return mask_u8
 
     def detect_side_lr(self, isLeft: bool):
         # todo
@@ -181,7 +181,7 @@ class Image:
         mask = cv.bitwise_not(mask)
         # remove blankspaces again
         mask_u8 = cv.bitwise_and(mask_u8, mask)
-        return mask
+        return mask_u8
 
     @staticmethod
     def check_area(img):
