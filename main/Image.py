@@ -14,6 +14,13 @@ class Image:
         self.image_12_bit = self.load_image()
         self.crop_image_8_bit,top_left = self.crop(self.image_8_bit)
         self.crop_image_12_bit = self.crop_grid(self.image_12_bit,self.crop_image_8_bit,top_left)
+        
+        #blackspot
+        res = self.blackspot_detect()
+        self.blackspot = {
+            "right": res[0],
+            "left" : res[1]
+        }
 
     def load_image(self, is_8bit=False) -> Mat:
         """
@@ -33,7 +40,7 @@ class Image:
         """
                 crop to the whole blade
         """
-        template = cv.imread('cropped_manual.tif', cv.IMREAD_GRAYSCALE)
+        template = cv.imread('asset/cropped_manual.tif', cv.IMREAD_GRAYSCALE)
         res = cv.matchTemplate(image, template, cv.TM_SQDIFF_NORMED)
         min_val, max_val, min_loc, max_loc = cv.minMaxLoc(res)
         top_left = min_loc
@@ -45,8 +52,7 @@ class Image:
                 Crop Grid from the image
         """
         cropped_image = image_12_bit[top_left[1]:(top_left[1] + 445), top_left[0]:(top_left[0] + 1338)]
-
-        template_grid = cv.imread('cropped_grid_area.tif', cv.IMREAD_GRAYSCALE)
+        template_grid = cv.imread('asset/cropped_grid_area.tif', cv.IMREAD_GRAYSCALE)
         bound = cv.matchTemplate(cropped_image_8bit, template_grid, cv.TM_SQDIFF_NORMED)
         min_val, max_val, min_loc, max_loc = cv.minMaxLoc(bound)
         top_left = min_loc
@@ -83,9 +89,9 @@ class Image:
         # todo
         mask = None
         if isLeft:
-            mask = cv.imread("left_template.png", cv.IMREAD_UNCHANGED)
+            mask = cv.imread("asset/left_template.png", cv.IMREAD_UNCHANGED)
         else:
-            mask = cv.imread("right_template.png", cv.IMREAD_UNCHANGED)
+            mask = cv.imread("asset/right_template.png", cv.IMREAD_UNCHANGED)
 
 
         pic = self.crop_image_8_bit[:, -68:-5]
@@ -111,14 +117,13 @@ class Image:
         mask_u8 = anomalies.astype(np.uint8) * 255
         mask_u8 = cv.cvtColor(mask_u8, cv.COLOR_GRAY2RGB)
         if isLeft:
-            mask = cv.imread("left_template_nt.png", cv.IMREAD_COLOR)
+            mask = cv.imread("asset/left_template_nt.png", cv.IMREAD_COLOR)
         else:
-            mask = cv.imread("right_template_nt.png", cv.IMREAD_COLOR)
+            mask = cv.imread("asset/right_template_nt.png", cv.IMREAD_COLOR)
         mask = mask[:445, :63]
         mask = cv.bitwise_not(mask)
         #remove blankspaces again
         mask_u8 = cv.bitwise_and(mask_u8, mask)
-
         return mask
 
     def check_area(self,img):
@@ -151,9 +156,8 @@ class Image:
             return False
 
     def blackspot_detect(self):
-        # gradient = cv.convertScaleAbs(self.image_8_bit, -0.5, 16)
-        # img_cm = cv.applyColorMap(gradient, cv.COLORMAP_WINTER)
-        
+        """
+        Blackspot detection"""
         right_side = self.detect_side_lr(False)
         left_side = self.detect_side_lr(True)
         
@@ -162,7 +166,7 @@ class Image:
             
         if self.defect_valid(left_side):
             left_side = self.check_area(left_side)
-        return right_side,left_side
+        return (right_side,left_side)
             
         
 
