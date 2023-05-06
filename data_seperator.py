@@ -1,6 +1,10 @@
 import os
 import pandas as pd
 from PIL import Image
+from main import analyze_grid
+from matplotlib import pyplot as plt
+import numpy as np
+from tqdm import tqdm
 
 
 def preprocess_data(tif_folder, csv_file):
@@ -10,7 +14,7 @@ def preprocess_data(tif_folder, csv_file):
     data = []
 
     # Create a dictionary to store preprocessed data
-    data_dict = {"filename": [], "image": [], "label": []}
+    data_dict = {"filename": [], "path": [], "label": []}
 
     # Iterate through the rows in the CSV file
     for index, row in labels_df.iterrows():
@@ -33,12 +37,31 @@ def preprocess_data(tif_folder, csv_file):
 # Example usage:
 
 
-tif_folder =  './PrePro/input/'
-csv_file = './PrePro/labels_train.csv'
+main_folder = r'C:\Users\david\Desktop\data'
+tif_folder = main_folder+r'\train'
+csv_file = r'C:\Users\david\Desktop\data\labels_train.csv'
+
 preprocessed_data = preprocess_data(tif_folder, csv_file)
 
 
-for i in preprocessed_data:
+good=[]
+bad = []
+
+
+refernce_grid = np.load(main_folder+r'\match_grid.out.npy')
+
+for i in tqdm(preprocessed_data):
     if i["label"] == "good":
+        good.append(analyze_grid(i["path"],main_folder, refernce_grid ))
+
+    #if i["label"] == "black_defect":
+    #    bad.append(analyze_grid(i["path"],main_folder, refernce_grid  ))
+
+fig, (ax1, ax2) = plt.subplots(1,2, sharex=True, sharey=True)
+fig.suptitle('Vertically stacked subplots')
+ax1.hist(np.concatenate(good).ravel(), density=True, bins=1000)  # density=False would make counts
+ax2.hist(np.concatenate(bad).ravel(), density=True, bins=1000)  # density=False would make counts
+
+plt.show()
 
 

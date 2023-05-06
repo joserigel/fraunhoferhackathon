@@ -5,12 +5,57 @@ import numpy as np
 from matplotlib import pyplot as plt
 from crop import crop_img
 import math
+import scipy
+from tqdm import tqdm
+from scipy import ndimage, datasets
 
 input_folder_path = './PrePro/input'
 output_folder_path = './PrePro/output'
+from scipy.signal import find_peaks
+from scipy import spatial
 
 
 import numpy as np
+
+def scan_line(image_blurred, image):
+    res = []
+
+
+
+
+    full_img_45_blurred = ndimage.rotate(image_blurred, 45, reshape=True)
+    full_img_45 = ndimage.rotate(image, 45, reshape=True)*0
+
+
+    image_s = full_img_45_blurred.shape
+
+
+    y_sum = np.sum(full_img_45_blurred,0)
+    x_sum = np.sum(full_img_45_blurred,1)
+
+
+    valleys_y, _ = find_peaks(-y_sum, distance=10, prominence=10000)
+    valleys_x, _ = find_peaks(-x_sum, distance=10, prominence=10000)
+
+    for i in valleys_x:
+        cv2.line(full_img_45, (0, i), (image_s[0],i) , 4095, 2)
+
+
+    for i in valleys_y:
+        cv2.line(full_img_45, ( i,0), (i,image_s[0]) , 4095, 2)
+
+    full_img_45_done = ndimage.rotate(full_img_45, -45, reshape=True)[590:904+1,158:1337]
+    #Oben links (158,590) Unten Rechts (1336,904)
+
+
+    cv2.imshow('image',full_img_45_done)
+    cv2.waitKey(30)
+
+    #plt.imshow(full_img_45_done)
+    #plt.plot(x_sum)
+    #plt.plot(valleys_x, x_sum[valleys_x], "x")
+    #plt.show()
+
 
 
 def remove_small_regions(image,thresh):
@@ -27,9 +72,9 @@ def remove_small_regions(image,thresh):
             result[labels == i + 1] = 255
 
     return result
-numbers=[]
 
-for filename in glob.glob(input_folder_path + '/*.tif'):
+
+def analyze_grid(filename,main_folder,refernce_grid):
 
     img = cv2.imread(filename,  cv2.IMREAD_GRAYSCALE | cv2.IMREAD_ANYDEPTH)
     img_low_bit = cv2.imread(filename,  cv2.IMREAD_GRAYSCALE)
@@ -40,109 +85,35 @@ for filename in glob.glob(input_folder_path + '/*.tif'):
     #img = img[40:-40,80:-80]
 
 
-    kernel_size = 9
+    kernel_size = 21
     blur_gray = cv2.GaussianBlur(img , (kernel_size, kernel_size), 0)
 
+    scan_line(blur_gray,img)
+
+    return None
+
+    """
     #plt.imshow(blur_gray)
     #plt.show()
 
 
-    blur_gray = cv2.adaptiveThreshold(cv2.convertScaleAbs(blur_gray / 16),255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,\
-            cv2.THRESH_BINARY,31,2)
+    deadzone_y = 40
+    deadzone_x = 80
 
-    #plt.imshow(blur_gray)
-    #plt.show()
+    refernce_img = img[deadzone_y:-deadzone_y, deadzone_x:-deadzone_x]
 
-    contour, hier = cv2.findContours(blur_gray, cv2.RETR_CCOMP, cv2.CHAIN_APPROX_SIMPLE)
+    refernce_grid = refernce_grid[deadzone_y:-deadzone_y, deadzone_x:-deadzone_x]
 
-    for cnt in contour:
-        cv2.drawContours(blur_gray, [cnt], 0, 255, -1)
-
-    blur_gray = remove_small_regions(blur_gray, 60)
-
-    #plt.imshow(blur_gray)
-    #plt.show()
-
-
-
-    low_threshold = 50
-    high_threshold = 255
-    edges = cv2.Canny(blur_gray, low_threshold, high_threshold)
-
-    #plt.imshow(edges)
-    #plt.show()
-
-
-
-    rho = 1  # distance resolution in pixels of the Hough grid
-    theta = np.pi / 180  # angular resolution in radians of the Hough grid
-    threshold = 20  # minimum number of votes (intersections in Hough grid cell)
-    min_line_length = 20  # minimum number of pixels making up a line
-    max_line_gap = 20  # maximum gap in pixels between connectable line segments
-    removed_lines = np.copy(blur_gray)  # creating a blank to draw lines on
-
-    # Run Hough on edge detected image
-    # Output "lines" is an array containing endpoints of detected line segments
-    lines = cv2.HoughLinesP(edges,rho = 1,theta = 1*np.pi/180,threshold = 40,minLineLength = 100,maxLineGap = 30)
-
-    angle_tol = 5
-    for line in lines:
-        for x1, y1, x2, y2 in line:
-            angle = np.rad2deg(np.arctan2(y2 - y1, x2 - x1))
-            if(abs(abs(angle)-45) < angle_tol):
-                cv2.line(removed_lines, (x1, y1), (x2, y2), 0, 1)
-
-
-
-    #cv2.imshow('image', removed_lines)
-    #cv2.waitKey()
-
-    result = remove_small_regions(removed_lines,60)
-    line_mask = cv2.bitwise_not(result)
-    line_mask = remove_small_regions(line_mask, 60)
-
-    # Creating kernel
-    kernel = np.ones((3, 3), np.uint8)
-
-    # Using cv2.erode() method
-    line_mask = cv2.erode(line_mask, kernel)
-
-    deadzone_y = 0
-    deadzon_x = 0
-
-    #line_mask[0:deadzone_y,:] = 0
-    #line_mask[-deadzone_y:-1,:] = 0
-
-
-    #line_mask[:,0:deadzon_x] = 0
-    #line_mask[:,-deadzon_x:-1] = 0
-
+    line_mask = line_mask[deadzone_y:-deadzone_y, deadzone_x:-deadzone_x]
 
     backtorgb = cv2.cvtColor(line_mask, cv2.COLOR_GRAY2RGB)
     backtorgb[:, :, 0] = np.zeros([backtorgb.shape[0], backtorgb.shape[1]])
     backtorgb[:, :, 1] = np.zeros([backtorgb.shape[0], backtorgb.shape[1]])
 
-    added_image = cv2.addWeighted(cv2.cvtColor(cv2.convertScaleAbs(img /16),cv2.COLOR_GRAY2RGB), 0.8, backtorgb, 0.3, 0)
+    added_image = cv2.addWeighted(cv2.cvtColor(cv2.convertScaleAbs(refernce_img /16),cv2.COLOR_GRAY2RGB), 0.8, backtorgb, 0.3, 0)
 
-    #cv2.imshow('image', added_image)
-    #cv2.waitKey(100)
-
-    line_mask_red = line_mask / 255
-    residual = np.multiply(line_mask_red,img)
-
-    maske_arr = np.invert( np.array(line_mask,dtype=bool) )
-    mx = np.ma.masked_array(img, mask=maske_arr)
-
-    data = mx[mx.mask == False]
-
-    numbers.append(data)
+    cv2.imshow('image', added_image)
+    cv2.waitKey(100)
+    """
 
 
-
-
-
-
-plt.hist(np.concatenate(numbers).ravel(), density=False, bins=4095)  # density=False would make counts
-plt.ylabel('Probability')
-plt.xlabel('Data');
-plt.show()
