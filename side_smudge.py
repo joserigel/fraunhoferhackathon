@@ -15,10 +15,13 @@ def detect_side(isLeft: bool, img):
     if (isLeft):
         pic = img[:, 5:68]
 
+    #blurs template to remove small spots
     pic = cv.GaussianBlur(pic, (3, 3), 0)
+    #make picture brighter
     pic = cv.convertScaleAbs(pic, 0.5, 10)
     pic = cv.cvtColor(pic, cv.COLOR_GRAY2RGBA)
     mask = mask[:445, :63]
+    #remove blank space with mask 
     pic = cv.subtract(pic, mask)
     
 
@@ -27,6 +30,7 @@ def detect_side(isLeft: bool, img):
     std = np.nanstd(arr)
 
     
+    #check for pixels above the standard deviation 
     anomalies = (np.abs(arr - mean) / std >= 2.0).any(axis=2)
     mask_u8 = anomalies.astype(np.uint8) * 255
     mask_u8 = cv.cvtColor(mask_u8, cv.COLOR_GRAY2RGB)
@@ -36,6 +40,7 @@ def detect_side(isLeft: bool, img):
         mask = cv.imread("right_template_nt.png", cv.IMREAD_COLOR)
     mask = mask[:445, :63]
     mask = cv.bitwise_not(mask)
+    #remove blankspaces again
     mask_u8 = cv.bitwise_and(mask_u8, mask)
 
     return mask_u8
