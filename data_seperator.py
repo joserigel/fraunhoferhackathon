@@ -7,6 +7,8 @@ def preprocess_data(tif_folder, csv_file):
     # Read the CSV file containing the labels
     labels_df = pd.read_csv(csv_file)
 
+    data = []
+
     # Create a dictionary to store preprocessed data
     data_dict = {"filename": [], "image": [], "label": []}
 
@@ -18,25 +20,25 @@ def preprocess_data(tif_folder, csv_file):
         # Check if the .tif file exists in the specified folder
         tif_file_path = os.path.join(tif_folder, filename)
         if os.path.isfile(tif_file_path):
-            # Read the .tif image using PIL
-            image = Image.open(tif_file_path)
-
             # Add the filename, image, and label to the data dictionary
-            data_dict["filename"].append(filename)
-            data_dict["image"].append(image)
-            data_dict["label"].append(label)
+            data_dict = {"filename": filename, "path": tif_file_path, "label": label}
+            data.append(data_dict)
         else:
             print(f"File not found: {tif_file_path}")
 
     # Return the preprocessed data as a Pandas DataFrame
-    return pd.DataFrame(data_dict)
-
+    return data
 
 
 # Example usage:
 
 
-tif_folder =  './PrePro/input'
+tif_folder =  './PrePro/input/'
 csv_file = './PrePro/labels_train.csv'
 preprocessed_data = preprocess_data(tif_folder, csv_file)
-print(preprocessed_data.head())
+
+
+for i in preprocessed_data:
+    if i["label"] == "good":
+
+
