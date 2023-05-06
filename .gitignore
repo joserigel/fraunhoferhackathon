@@ -1,9 +1,10 @@
 # Jose specific, might apply to you, might not, please do not change this section without asking
 env/
+__pycache__/
 PrePro/input/
-PrePro/output/
-PrePro/Precropped/
+PrePro/output
 
 
 # Lennard specific
 test/
+PrePro/precropped/
