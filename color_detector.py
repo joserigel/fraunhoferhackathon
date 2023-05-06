@@ -13,7 +13,7 @@ def detect_error(filename):
     image = Image.open(filename)
     image = np.array(image)
 
-    threshold=200
+    threshold=255
     white_pixels = np.count_nonzero(image > threshold)  # count white pixels
     if white_pixels:
         return True
