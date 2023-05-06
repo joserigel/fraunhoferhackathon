@@ -13,11 +13,12 @@ def detect_error(filename):
     #cv.drawContours(img, contours, -1, (0, 255, 0), 2)
     # Get the colors in the image
     ans  = set(image.getcolors(image.size[0] * image.size[1]))
-    lower_bound = 50
+    lower_bound = 70
     upper_bound = 255
     count = 0 
+    #print(ans)
     for i in ans:
-        if i[1][0]==0 and i[1][2] == 0 and i[1][1]>lower_bound and i[1][1]<=upper_bound:
+        if i[1][0]<40 and i[1][2] < 40 and i[1][1]>lower_bound and i[1][1]<=upper_bound:
             count+=1
 
     if  count>1 :
@@ -25,7 +26,7 @@ def detect_error(filename):
     return False
 
 
-files  = ["protector_left_green.png","black.png"]
+files  = ["protector_left_green.png","black.png", "grid_greens.png", "grid_black.png"]
 
 for f in files: 
-     print(detect_error(f))
+    print(detect_error(f))
