@@ -1,7 +1,9 @@
 # Jose specific, might apply to you, might not, please do not change this section without asking
 env/
 PrePro/input/
-PrePro/output
+PrePro/output/
+PrePro/Precropped/
+
 
 # Lennard specific
 test/
