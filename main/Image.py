@@ -41,7 +41,7 @@ class Image:
                 crop to the whole blade
         """
         template = cv.imread(os.path.join(
-            self.cwd, 'asset/cropped_manual.tif'), cv.IMREAD_GRAYSCALE)
+            self.cwd, 'asset\\cropped_manual.tif'), cv.IMREAD_GRAYSCALE)
         res = cv.matchTemplate(image, template, cv.TM_SQDIFF_NORMED)
         min_val, max_val, min_loc, max_loc = cv.minMaxLoc(res)
         top_left = min_loc
