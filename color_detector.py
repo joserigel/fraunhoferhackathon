@@ -8,18 +8,20 @@ import cv2 as cv
 
 
 """
-detects white makings that represent errors in the printing.  
+detects white markings that represent errors in the printing.  
 """
 def detect_error(filename):
     image = Image.open(filename)
-    image = image.convert("RGB")
-    colors  = set(image.getcolors(image.size[0] * image.size[1]))
+    image = np.array(image)
+
+    colors, counts = np.unique(image.reshape(-1, image.shape[-1]), axis=0, return_counts=True)
+    colors =[list(color) for color in colors] 
     threshold= 230
     count = 0
     for i in colors:
-        if i[1][0]  >threshold and i[1][2] >threshold and i[1][1]>threshold:
+        if i[0]  >threshold and i[2] >threshold and i[1]>threshold:
             count+=1
-    if  count>0 : #if there is 
+    if  count>0 : 
             return True
     return False
 
