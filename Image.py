@@ -5,7 +5,7 @@ import numpy as np
 from scipy import ndimage,datasets
 from scipy.signal import find_peaks, peak_widths
 from scipy.interpolate import splrep, BSpline
-
+import time
 Mat = np.ndarray[int, np.dtype[np.generic]]
 
 
@@ -20,6 +20,7 @@ class Image:
         self.grid_threshold = grid_threshold
         self.grid_value = 0
 
+        time0 = time.time()
         # blackspot
         blackspot = self.blackspot_detect()
         self.blackspot = {
@@ -37,7 +38,9 @@ class Image:
         mask,img = self.grid_detect()
         self.grid_silver = self.grid_silver(mask,img)
         self.grid_black = self.grid_black(mask,img)
+        
         self.processed_image = self.combine_image()
+        print(time.time()-time0)
 
     def load_image(self, is_8bit=False) -> Mat:
         """
@@ -217,28 +220,6 @@ class Image:
     def draw_line_bl_topr(self,a,img,shape,w=1):
         for i in a:
             cv.line(img,  ( i,shape[1]), (i,0) , 255, w)
-        
-    def scan_line(self,blured,image):
-        full_img_45_blurred = ndimage.rotate(blured, 45, reshape=True)
-        full_img_45 = ndimage.rotate(image, 45, reshape=True)*0
-        
-        image_size = self.get_dim(full_img_45_blurred)
-        
-        y_sum = np.sum(full_img_45_blurred,0)
-        x_sum = np.sum(full_img_45_blurred,1)
-        valleys_y, _ = find_peaks(-y_sum, distance=10, prominence=50000)
-        valleys_x, _ = find_peaks(-x_sum, distance=10, prominence=50000)
-        for i in valleys_x:
-            cv.line(full_img_45, (0, i), (image_size[0],i) , 255, 1)
-
-
-        for i in valleys_y:
-            cv.line(full_img_45, ( i,0), (i,image_size[0]) , 255, 1)
-            
-        full_img_45_done = ndimage.rotate(full_img_45, -45, reshape=True)[590:904+1,158:1338]
-        _, full_img_45_done_thresh = cv.threshold(full_img_45_done, 127, 4095, cv.THRESH_BINARY)
-        full_img_45_done_thresh = cv.convertScaleAbs(full_img_45_done_thresh)
-        return full_img_45_done_thresh
     
     def scan_line2(self,blurred,image):
         res = []
