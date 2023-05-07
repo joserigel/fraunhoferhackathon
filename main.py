@@ -38,9 +38,6 @@ def scan_line(image_blurred, image):
 
 
 
-
-
-
     tolerance = 1
     base = 45
     tries = 21
@@ -48,7 +45,7 @@ def scan_line(image_blurred, image):
 
 
     for i in np.linspace(base - tolerance, base + tolerance, tries):
-        print(i)
+
 
         full_img_45_blurred = ndimage.rotate(image_blurred, i, reshape=True)
 
@@ -110,15 +107,18 @@ def scan_line(image_blurred, image):
     #plt.show()
 
     #Show Corrected
-    #plt.plot(c_x)
+    #plt.plot(c_x-c_x)
     #plt.plot(x_sum_corr)
-    #plt.plot(valleys_x, x_sum[valleys_x]-x_sum_corr[valleys_x], "x")
+    #plt.plot(valleys_x, x_sum_corr[valleys_x], "x")
     #plt.show()
 
     ####################################################################################
 
     full_img_45_blurred = ndimage.rotate(image_blurred, best_angle, reshape=True)
     full_img_45 = ndimage.rotate(image, best_angle, reshape=True)*0
+
+    #plt.imshow(full_img_45)
+    #plt.show()
 
 
     image_s = full_img_45_blurred.shape
@@ -223,18 +223,6 @@ def scan_line(image_blurred, image):
 
     return full_img_45_done_thresh
 
-"""
-
-    plt.plot(x_sum)
-    plt.plot(valleys_x, x_sum[valleys_x], "x")
-    plt.hlines(*results_half[1:], color="C2")
-    plt.show()
-
-    #single_pixel
-    a = np.extract(np.logical_and(valleys_x>275,valleys_x < 788) ,valleys_x)
-    draw_line_topl_br(a,full_img_45,image_s,1)
-
-"""
 
 
 
@@ -274,14 +262,14 @@ def analyze_grid(filename,main_folder):
 
     img = img[10:-10,10:-10]
     blur_gray = blur_gray[10:-10,10:-10]
+
     line_mask = scan_line(blur_gray,img)
 
 
 
-    analyze_silver(line_mask, img)
+    r = analyze_silver(line_mask, img)
 
-    return None
-    """
+
     mask_dil = line_mask
     mask_h, mask_w = mask_dil.shape
 
@@ -313,9 +301,9 @@ def analyze_grid(filename,main_folder):
     std_dev = np.std(data)
     av = np.average(data)
 
-    plt.imshow(img, cmap='gray')  # I would add interpolation='none'
-    plt.imshow(line_mask, cmap=colors, alpha=0.5 * (line_mask > 0))  # interpolation='none'
-    plt.show()
+    #plt.imshow(img, cmap='gray')  # I would add interpolation='none'
+    #plt.imshow(line_mask, cmap=colors, alpha=0.5 * (line_mask > 0))  # interpolation='none'
+    #plt.show()
 
 
 
@@ -336,29 +324,33 @@ def analyze_grid(filename,main_folder):
 
     img_dilation = np.subtract(img_dilation_border,img_dilation)
 
-    print (res)
+    #print (res)
 
     #plt.imshow(img, cmap='gray')  # I would add interpolation='none'
     #plt.imshow(img_dilation, cmap=colors, alpha=0.5 * (img_dilation > 0))  # interpolation='none'
     #plt.show()
    
 
-    if(res > 10): #580 filters roughly 5% of the dataset
+    if(res > 1000000): #580 filters roughly 5% of the dataset
         plt.imshow(img, cmap='gray')  # I would add interpolation='none'
         plt.imshow(img_dilation, cmap=colors, alpha=0.5 * (img_dilation > 0))  # interpolation='none'
         plt.show()
 
-    return res
+    end_result = (res,r)
+    return end_result
 
-"""
+
 def analyze_silver(mask,img):
-    #img = img[10:-10, 10:-10]
-    #mask = mask[10:-10, 10:-10]
 
-    mask =  np.array(mask, dtype=np.uint8)
+    kernel_size = 9
+    img_r = np.array(img/16,dtype=np.uint8)
+    img = np.array(cv2.GaussianBlur(img, (kernel_size, kernel_size), 0)/16,dtype=np.uint8)
+
+    mask = np.invert( np.array(mask, dtype=np.uint8) )
     kernel = np.ones((3, 3), np.uint8)
-    mask_dil = cv2.dilate(mask, kernel, iterations=1)
-    mask_dil = np.invert(mask_dil)/255
+
+    mask_dil = cv2.erode(mask, kernel, iterations=2)
+    mask_dil = mask_dil/255
 
     mask_h, mask_w = mask_dil.shape
 
@@ -378,16 +370,35 @@ def analyze_silver(mask,img):
     triangle_cnt = np.array([(mask_w, mask_h), (mask_w - 125, mask_h), (mask_w,mask_h- 125)])
     cv2.drawContours(mask_dil, [triangle_cnt], 0, 0, -1)
 
+    mask_dil = np.array(mask_dil, dtype=np.uint8)
+    mask_dil_strong = cv2.erode(mask_dil, kernel, iterations=2)
 
 
-    img_masked = np.multiply(mask_dil,img)
+    img_masked = np.multiply(img,mask_dil, dtype=np.uint8)
 
-    plt.imshow(img, cmap="gray")
-    plt.imshow(mask_dil, cmap=colors, alpha=0.2 * (mask_dil > 0))
-    plt.show()
 
-    mx_only_squares = np.ma.masked_array(img, mask=mask)
-    data = mx_only_squares[mx_only_squares.mask == False]
 
-    std_dev = np.std(data)
-    av = np.average(data)
+    edges = cv2.Canny(img, 50, 80)
+
+
+    data = np.extract(img_masked>0,img_masked)
+
+    std_dev = int(np.std(data))
+    av = int(np.mean(data))
+
+    div = np.abs( img_masked - av , dtype=np.uint8)
+    div = np.where(div > 0.8 * std_dev , div, 0)
+    heat = np.multiply(edges ,mask_dil_strong, dtype=np.uint8)
+    kernel = np.ones((3, 3), np.uint8)
+    heat = cv2.dilate(heat, kernel, iterations=1)
+    #heat = remove_small_regions(heat,10)
+
+    #plt.imshow(img, cmap="gray")
+    #plt.show()
+    #plt.imshow(img_r, cmap="gray")
+    #plt.imshow(mask_dil, cmap=colors, alpha=0.5 * (mask_dil > 0))  # interpolation='none'
+    #plt.show()
+    #plt.show()
+
+    return std_dev
+

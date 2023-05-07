@@ -44,12 +44,25 @@ counts_file = main_folder+r'\hist_counts.npy'
 
 preprocessed_data = preprocess_data(tif_folder, csv_file)
 
-res = []
+g = []
+bad = []
 
+g_g = 0
+g_b = 0
 
 for i in tqdm(preprocessed_data):
-    if(i["label"]=="silver_defect"):
-        res.append(analyze_grid(i["path"], main_folder) )
+
+
+
+    #if(i["label"]=="good"):
+    #    g_g +=1
+    #    g.append(analyze_grid(i["path"], main_folder) )
+    if (i["label"] == "silver_defect"):
+        g_b += 1
+        bad.append(analyze_grid(i["path"], main_folder))
+
+    if(g_g>300 and g_b>300):
+        break
 
 
 #np.save(counts_file,res)
@@ -60,9 +73,10 @@ a = np.count_nonzero((counts < 580))/counts.size
 
 print(a)
 
-fig, (ax1) = plt.subplots(1,1, sharex=True, sharey=True)
+fig, (ax1, ax2) = plt.subplots(1, 2, sharex=True, sharey=True)
 fig.suptitle('Vertically stacked subplots')
-ax1.hist(counts, density=True, bins=500)  # density=False would make counts
+ax1.hist(g, density=True, bins=20)  # density=False would make counts
+ax2.hist(bad, density=True, bins=20)  # density=False would make counts
 
 plt.show()
 
