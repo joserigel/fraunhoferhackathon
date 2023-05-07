@@ -1,673 +1,1425 @@
 id,time,silverdefect,blackdefect,blackspot,teethdefect
-cam1_0013190123054414102.tif,0.7175137996673584,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190123055514204.tif,0.7024245262145996,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,True
-cam1_0013190202130112203.tif,0.6861014366149902,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190202130508103.tif,0.6722152233123779,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190202130804304.tif,0.6816389560699463,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190202130814104.tif,0.6972646713256836,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190202141536202.tif,0.7674670219421387,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190202141636202.tif,0.7564065456390381,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190202142042202.tif,0.6718571186065674,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190202144714104.tif,0.6684525012969971,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190202160428203.tif,0.6823892593383789,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190202173344103.tif,0.6824827194213867,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190202185454304.tif,0.6818149089813232,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,False,False
-cam1_0013190202225020101.tif,0.6912360191345215,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190203001106103.tif,0.6645400524139404,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190203042922204.tif,0.6706864833831787,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,False,False
-cam1_0013190203051644201.tif,0.6710770130157471,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190203061422203.tif,0.6743259429931641,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190203062606204.tif,0.7013266086578369,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,False,False
-cam1_0013190203063100104.tif,0.679030179977417,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190203070658101.tif,0.6667459011077881,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190203071546201.tif,0.6629912853240967,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190203075302203.tif,0.6624062061309814,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190203112552303.tif,0.6704752445220947,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190203131336204.tif,0.6571493148803711,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190203140540104.tif,0.663325309753418,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190203141916101.tif,0.6613671779632568,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190203170032203.tif,0.6722548007965088,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190203175832204.tif,0.6603848934173584,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,False,False
-cam1_0013190203202128101.tif,0.6588296890258789,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190203204738204.tif,0.6691172122955322,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,False,False
-cam1_0013190203221614201.tif,0.6906800270080566,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190203235614201.tif,0.6945533752441406,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190203235644201.tif,0.7071332931518555,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190204000520104.tif,0.7227983474731445,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190204005444204.tif,0.729804277420044,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190204012642301.tif,0.6956782341003418,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190204021140201.tif,0.6676437854766846,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,False,False
-cam1_0013190204025546104.tif,0.7024571895599365,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190204033126301.tif,0.7458312511444092,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,False,False
-cam1_0013190204033600301.tif,0.790130615234375,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190204043112203.tif,0.7225418090820312,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190204045200203.tif,0.7316277027130127,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,False,False
-cam1_0013190204052158204.tif,0.7371809482574463,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190204055350104.tif,0.7467865943908691,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190204062444304.tif,0.6963140964508057,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,False,False
-cam1_0013190204074826303.tif,0.7283749580383301,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190204082618202.tif,0.6907792091369629,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190204084048102.tif,0.7157702445983887,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190204084300202.tif,0.7183756828308105,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190204084542302.tif,0.6927604675292969,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190204085016302.tif,0.7231800556182861,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190204090548202.tif,0.7046875953674316,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190204091318201.tif,0.7214150428771973,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190204095746202.tif,0.7094144821166992,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190204100516104.tif,0.701103687286377,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,False,False
-cam1_0013190204110200303.tif,0.6864252090454102,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190204113318203.tif,0.715723991394043,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190204121716103.tif,0.6812958717346191,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190204121738303.tif,0.7039182186126709,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190204125738302.tif,0.7036378383636475,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190204130348304.tif,0.6692359447479248,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190204130418304.tif,0.6660449504852295,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190204142910202.tif,0.6803038120269775,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190204152058203.tif,0.6801636219024658,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190204154338103.tif,0.6772561073303223,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190204155508302.tif,0.6619870662689209,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190204184218103.tif,0.6726584434509277,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190204190400101.tif,0.6682367324829102,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190204201822204.tif,0.6735613346099854,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190204215716201.tif,0.7217276096343994,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190205003958204.tif,0.6907262802124023,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,True,False
-cam1_0013190205011830203.tif,0.6867055892944336,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190205031008203.tif,0.6652872562408447,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190205102114203.tif,0.7254126071929932,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190206171302104.tif,0.7287662029266357,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190206191712101.tif,0.6743130683898926,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190206202536102.tif,0.6518158912658691,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190206210940301.tif,0.6923322677612305,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190207070930103.tif,0.7103993892669678,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,False,False
-cam1_0013190207071002104.tif,0.6821229457855225,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,False,False
-cam1_0013190207071522204.tif,0.6909217834472656,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,False,False
-cam1_0013190207071602304.tif,0.6840028762817383,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,False,False
-cam1_0013190207071654204.tif,0.6741983890533447,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190207080602204.tif,0.6892926692962646,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,False,False
-cam1_0013190207092006101.tif,0.7060325145721436,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,False,False
-cam1_0013190207101504101.tif,0.6727142333984375,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,False,False
-cam1_0013190207114856102.tif,0.695061206817627,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,False,False
-cam1_0013190207124840301.tif,0.677581787109375,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,False,False
-cam1_0013190207131548202.tif,0.6796114444732666,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,False,False
-cam1_0013190207132442302.tif,0.7003092765808105,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,False,False
-cam1_0013190207143006201.tif,0.7230334281921387,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,False,False
-cam1_0013190207144652102.tif,0.696497917175293,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],True,False,False
-cam1_0013190207154040102.tif,0.680199384689331,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
-cam1_0013190207234936301.tif,0.6798079013824463,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,False,False
-cam1_0013190208011810203.tif,0.6687264442443848,[[False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]
- ...
- [False False False ... False False False]
- [False False False ... False False False]
- [False False False ... False False False]],False,True,False
+cam1_0013190123054414102.tif,0.6922719478607178,True,False,True,False
+cam1_0013190123055514204.tif,0.6693317890167236,True,False,True,True
+cam1_0013190202130112203.tif,0.6753358840942383,True,True,True,False
+cam1_0013190202130508103.tif,0.6412804126739502,True,True,True,False
+cam1_0013190202130804304.tif,0.656543493270874,True,True,True,False
+cam1_0013190202130814104.tif,0.6545164585113525,True,False,True,False
+cam1_0013190202141536202.tif,0.6544368267059326,True,True,True,False
+cam1_0013190202141636202.tif,0.6342859268188477,True,False,True,False
+cam1_0013190202142042202.tif,0.6427505016326904,True,True,True,False
+cam1_0013190202144714104.tif,0.6355807781219482,True,False,True,False
+cam1_0013190202160428203.tif,0.6499574184417725,True,False,True,False
+cam1_0013190202173344103.tif,0.6469523906707764,True,False,True,False
+cam1_0013190202185454304.tif,0.6550288200378418,True,False,False,False
+cam1_0013190202225020101.tif,0.640540361404419,True,False,True,False
+cam1_0013190203001106103.tif,0.6339738368988037,True,False,True,False
+cam1_0013190203042922204.tif,0.6502244472503662,True,False,False,False
+cam1_0013190203051644201.tif,0.6300449371337891,True,False,True,False
+cam1_0013190203061422203.tif,0.6324083805084229,True,False,True,False
+cam1_0013190203062606204.tif,0.6333532333374023,True,False,False,False
+cam1_0013190203063100104.tif,0.6255741119384766,True,False,True,False
+cam1_0013190203070658101.tif,0.6230945587158203,True,True,True,False
+cam1_0013190203071546201.tif,0.6422584056854248,True,True,True,False
+cam1_0013190203075302203.tif,0.6278650760650635,True,False,True,False
+cam1_0013190203112552303.tif,0.6233832836151123,True,False,True,False
+cam1_0013190203131336204.tif,0.6224446296691895,True,False,True,False
+cam1_0013190203140540104.tif,0.632392406463623,True,False,True,False
+cam1_0013190203141916101.tif,0.6214499473571777,True,False,True,False
+cam1_0013190203170032203.tif,0.6244876384735107,True,False,True,False
+cam1_0013190203175832204.tif,0.6286952495574951,True,True,False,False
+cam1_0013190203202128101.tif,0.6187825202941895,True,False,True,False
+cam1_0013190203204738204.tif,0.6221020221710205,True,False,False,False
+cam1_0013190203221614201.tif,0.6197209358215332,True,False,True,False
+cam1_0013190203235614201.tif,0.620356559753418,True,False,True,False
+cam1_0013190203235644201.tif,0.619901180267334,True,False,True,False
+cam1_0013190204000520104.tif,0.6163887977600098,True,False,True,False
+cam1_0013190204005444204.tif,0.6182835102081299,True,False,True,False
+cam1_0013190204012642301.tif,0.6328942775726318,True,False,True,False
+cam1_0013190204021140201.tif,0.6300792694091797,True,False,False,False
+cam1_0013190204025546104.tif,0.6267786026000977,True,False,True,False
+cam1_0013190204033126301.tif,0.6257131099700928,True,False,False,False
+cam1_0013190204033600301.tif,0.6153833866119385,True,False,True,False
+cam1_0013190204043112203.tif,0.6231226921081543,True,False,True,False
+cam1_0013190204045200203.tif,0.6205563545227051,True,False,False,False
+cam1_0013190204052158204.tif,0.628253698348999,True,False,True,False
+cam1_0013190204055350104.tif,0.6178631782531738,True,False,True,False
+cam1_0013190204062444304.tif,0.62229323387146,True,False,False,False
+cam1_0013190204074826303.tif,0.6252532005310059,True,True,True,False
+cam1_0013190204082618202.tif,0.6183750629425049,True,True,True,False
+cam1_0013190204084048102.tif,0.6184055805206299,True,True,True,False
+cam1_0013190204084300202.tif,0.6223208904266357,True,True,True,False
+cam1_0013190204084542302.tif,0.6223905086517334,True,False,True,False
+cam1_0013190204085016302.tif,0.6153924465179443,True,True,True,False
+cam1_0013190204090548202.tif,0.619365930557251,True,True,True,False
+cam1_0013190204091318201.tif,0.6179559230804443,True,False,True,False
+cam1_0013190204095746202.tif,0.6172695159912109,True,True,True,False
+cam1_0013190204100516104.tif,0.6213927268981934,True,True,False,False
+cam1_0013190204110200303.tif,0.6299543380737305,True,True,True,False
+cam1_0013190204113318203.tif,0.6392669677734375,True,True,True,False
+cam1_0013190204121716103.tif,0.625917911529541,True,True,True,False
+cam1_0013190204121738303.tif,0.6768398284912109,True,True,True,False
+cam1_0013190204125738302.tif,0.6848702430725098,True,False,True,False
+cam1_0013190204130348304.tif,0.6743485927581787,True,False,True,False
+cam1_0013190204130418304.tif,0.6864585876464844,True,False,True,False
+cam1_0013190204142910202.tif,0.682999849319458,True,False,True,False
+cam1_0013190204152058203.tif,0.6902148723602295,True,False,True,False
+cam1_0013190204154338103.tif,0.6669600009918213,True,False,True,False
+cam1_0013190204155508302.tif,0.6756336688995361,True,False,True,False
+cam1_0013190204184218103.tif,0.6825051307678223,True,True,True,False
+cam1_0013190204190400101.tif,0.7006418704986572,True,True,True,False
+cam1_0013190204201822204.tif,0.6862001419067383,True,True,True,False
+cam1_0013190204215716201.tif,0.6745655536651611,True,False,True,False
+cam1_0013190205003958204.tif,0.6839957237243652,True,True,True,False
+cam1_0013190205011830203.tif,0.6810507774353027,True,False,True,False
+cam1_0013190205031008203.tif,0.6822941303253174,True,False,True,False
+cam1_0013190205102114203.tif,0.6925175189971924,True,False,True,False
+cam1_0013190206171302104.tif,0.6842195987701416,True,False,True,False
+cam1_0013190206191712101.tif,0.6811277866363525,True,False,True,False
+cam1_0013190206202536102.tif,0.6858110427856445,True,False,True,False
+cam1_0013190206210940301.tif,0.6897475719451904,True,False,True,False
+cam1_0013190207070930103.tif,0.6760764122009277,True,False,False,False
+cam1_0013190207071002104.tif,0.6781609058380127,True,False,False,False
+cam1_0013190207071522204.tif,0.6862161159515381,True,True,False,False
+cam1_0013190207071602304.tif,0.6831750869750977,True,False,False,False
+cam1_0013190207071654204.tif,0.6911349296569824,True,False,True,False
+cam1_0013190207080602204.tif,0.6932353973388672,True,True,False,False
+cam1_0013190207092006101.tif,0.6839067935943604,True,True,False,False
+cam1_0013190207101504101.tif,0.687974214553833,True,False,False,False
+cam1_0013190207114856102.tif,0.6917998790740967,True,False,False,False
+cam1_0013190207124840301.tif,0.6749234199523926,True,True,False,False
+cam1_0013190207131548202.tif,0.6733839511871338,True,False,False,False
+cam1_0013190207132442302.tif,0.6890511512756348,True,True,False,False
+cam1_0013190207143006201.tif,0.684689998626709,True,True,False,False
+cam1_0013190207144652102.tif,0.6795001029968262,True,True,False,False
+cam1_0013190207154040102.tif,0.6881580352783203,True,False,True,False
+cam1_0013190207234936301.tif,0.6822774410247803,True,False,False,False
+cam1_0013190208011810203.tif,0.6820647716522217,True,False,True,False
+cam1_0013190208040700203.tif,0.6938087940216064,True,False,False,False
+cam1_0013190208065834202.tif,0.6858830451965332,True,True,False,False
+cam1_0013190208122136201.tif,0.6961791515350342,True,True,True,False
+cam1_0013190208130238204.tif,0.6898822784423828,True,True,True,False
+cam1_0013190208182436204.tif,0.684992790222168,True,False,True,False
+cam1_0013190209032212304.tif,0.6783847808837891,True,False,True,False
+cam1_0013190209032324104.tif,0.681204080581665,True,True,True,False
+cam1_0013190209032458104.tif,0.6883130073547363,True,False,False,False
+cam1_0013190209033520202.tif,0.6809890270233154,True,False,True,False
+cam1_0013190209034510203.tif,0.6979024410247803,True,True,True,False
+cam1_0013190209034550303.tif,0.6837961673736572,True,False,True,False
+cam1_0013190209034938103.tif,0.6880865097045898,True,True,True,False
+cam1_0013190209035834204.tif,0.6771523952484131,True,True,True,False
+cam1_0013190209043824102.tif,0.6762044429779053,True,True,True,False
+cam1_0013190209053100202.tif,0.6791458129882812,True,False,True,False
+cam1_0013190209053814203.tif,0.6968364715576172,True,False,True,False
+cam1_0013190209062526202.tif,0.6851508617401123,True,False,True,False
+cam1_0013190209065828302.tif,0.6675271987915039,True,False,True,False
+cam1_0013190209070022202.tif,0.6634981632232666,True,False,True,False
+cam1_0013190209070032302.tif,0.6556804180145264,True,False,True,False
+cam1_0013190209070102302.tif,0.6789300441741943,True,False,True,False
+cam1_0013190209070510303.tif,0.6585848331451416,True,False,True,False
+cam1_0013190209070654103.tif,0.6763556003570557,True,False,True,False
+cam1_0013190209072702203.tif,0.6794662475585938,True,False,True,False
+cam1_0013190209072712303.tif,0.6702017784118652,True,False,True,False
+cam1_0013190209073230102.tif,0.6632485389709473,True,False,True,False
+cam1_0013190209073250302.tif,0.6745100021362305,True,False,True,False
+cam1_0013190209073322302.tif,0.6694014072418213,True,False,True,False
+cam1_0013190209073850202.tif,0.665637731552124,True,False,True,False
+cam1_0013190209074002302.tif,0.6928684711456299,True,False,True,False
+cam1_0013190209074226202.tif,0.657977819442749,True,False,True,False
+cam1_0013190209074408302.tif,0.6869442462921143,True,False,True,False
+cam1_0013190209074550102.tif,0.6673805713653564,True,False,True,False
+cam1_0013190209083200102.tif,0.6940131187438965,True,False,False,False
+cam1_0013190209085630302.tif,0.6806671619415283,True,False,True,False
+cam1_0013190209090344304.tif,0.6775617599487305,True,False,True,False
+cam1_0013190209092838202.tif,0.658050537109375,True,False,True,False
+cam1_0013190209103012302.tif,0.6728155612945557,True,False,True,False
+cam1_0013190209103144302.tif,0.6664390563964844,True,False,True,False
+cam1_0013190209104520104.tif,0.6636519432067871,True,False,False,False
+cam1_0013190209105506104.tif,0.6709115505218506,True,False,True,False
+cam1_0013190209112344101.tif,0.668799877166748,True,False,True,False
+cam1_0013190209112628201.tif,0.6587953567504883,True,False,False,False
+cam1_0013190209125600101.tif,0.6944842338562012,True,False,True,False
+cam1_0013190209133616203.tif,0.6721348762512207,True,False,True,False
+cam1_0013190209152222104.tif,0.6720836162567139,True,False,True,False
+cam1_0013190209153058304.tif,0.6751084327697754,True,False,True,False
+cam1_0013190209164818102.tif,0.6772158145904541,True,False,True,False
+cam1_0013190209184540103.tif,0.6846849918365479,True,False,True,False
+cam1_0013190209222440203.tif,0.6962261199951172,True,False,True,False
+cam1_0013190210010220201.tif,0.7030665874481201,True,True,True,False
+cam1_0013190210043138303.tif,0.6771931648254395,True,False,False,False
+cam1_0013190210101426304.tif,0.682265043258667,True,False,False,False
+cam1_0013190210173716203.tif,0.6755654811859131,True,False,False,False
+cam1_0013190211015316301.tif,0.6746513843536377,True,False,False,False
+cam1_0013190211213848203.tif,0.6578865051269531,True,False,False,False
+cam1_0013190211225610102.tif,0.665529727935791,True,True,False,False
+cam1_0013190212163510104.tif,0.6890537738800049,True,True,True,False
+cam1_0013190212232218101.tif,0.6651196479797363,True,True,False,False
+cam1_0013190213092026302.tif,0.6941273212432861,True,False,True,False
+cam1_0013190213185706103.tif,0.6789710521697998,True,False,False,False
+cam1_0013190214070000103.tif,0.6841115951538086,True,True,True,False
+cam1_0013190214072058204.tif,0.6774051189422607,True,False,False,False
+cam1_0013190214072750103.tif,0.6921179294586182,True,True,False,False
+cam1_0013190214102436301.tif,0.6910393238067627,True,False,False,False
+cam1_0013190214120236202.tif,0.6669573783874512,True,False,False,False
+cam1_0013190214120246302.tif,0.6818091869354248,True,False,False,False
+cam1_0013190214125832201.tif,0.6864995956420898,True,False,False,False
+cam1_0013190214130828101.tif,0.6705436706542969,True,False,True,False
+cam1_0013190214131424301.tif,0.6712689399719238,True,False,False,False
+cam1_0013190214134022101.tif,0.6857516765594482,True,False,True,False
+cam1_0013190214134510203.tif,0.6839847564697266,True,False,True,False
+cam1_0013190214144350304.tif,0.6812362670898438,True,False,True,False
+cam1_0013190214172838204.tif,0.6770036220550537,True,False,True,False
+cam1_0013190214180544304.tif,0.6784970760345459,True,False,True,False
+cam1_0013190214192220104.tif,0.6729955673217773,True,False,True,False
+cam1_0013190214194504101.tif,0.6831057071685791,True,False,True,False
+cam1_0013190214194706101.tif,0.690908670425415,True,False,True,False
+cam1_0013190214200404203.tif,0.6729457378387451,True,False,True,False
+cam1_0013190214201346204.tif,0.6763854026794434,True,False,True,False
+cam1_0013190214204016302.tif,0.6834812164306641,True,False,True,False
+cam1_0013190214204046302.tif,0.6812918186187744,True,False,True,False
+cam1_0013190214204126102.tif,0.6834807395935059,True,False,True,False
+cam1_0013190214204610202.tif,0.6759815216064453,True,False,True,False
+cam1_0013190214210902302.tif,0.6769721508026123,True,False,True,False
+cam1_0013190214214856103.tif,0.683222770690918,True,False,True,False
+cam1_0013190214224224304.tif,0.6813983917236328,True,False,True,False
+cam1_0013190214225354301.tif,0.681689977645874,True,False,True,False
+cam1_0013190214230848103.tif,0.6758298873901367,True,True,True,False
+cam1_0013190214234618104.tif,0.6758089065551758,True,False,False,False
+cam1_0013190215000150101.tif,0.6768748760223389,True,False,True,False
+cam1_0013190215003258203.tif,0.6768307685852051,True,False,True,False
+cam1_0013190215023204101.tif,0.6730701923370361,True,False,True,False
+cam1_0013190215024044102.tif,0.689706563949585,True,False,True,False
+cam1_0013190215042018104.tif,0.6688077449798584,True,False,True,False
+cam1_0013190215043518304.tif,0.6775772571563721,True,False,False,False
+cam1_0013190215043650101.tif,0.6808819770812988,True,False,True,False
+cam1_0013190215044726101.tif,0.6889228820800781,True,False,True,False
+cam1_0013190215050324202.tif,0.683966875076294,True,False,True,False
+cam1_0013190215050334302.tif,0.6916110515594482,True,False,True,False
+cam1_0013190215055114302.tif,0.684999942779541,True,False,False,False
+cam1_0013190215073026303.tif,0.6899523735046387,True,False,True,False
+cam1_0013190215073640103.tif,0.6734769344329834,True,False,True,False
+cam1_0013190215075154104.tif,0.6810271739959717,True,False,True,False
+cam1_0013190215075756104.tif,0.6733193397521973,True,False,True,False
+cam1_0013190215080120101.tif,0.6808512210845947,True,False,True,False
+cam1_0013190215080352101.tif,0.6873688697814941,True,True,False,False
+cam1_0013190215082038103.tif,0.6790456771850586,True,False,True,False
+cam1_0013190215082844103.tif,0.6837992668151855,True,False,True,False
+cam1_0013190215083226203.tif,0.6827349662780762,True,False,True,False
+cam1_0013190215084736203.tif,0.684556245803833,True,False,True,False
+cam1_0013190215085214103.tif,0.6774215698242188,True,False,True,False
+cam1_0013190215090352303.tif,0.6789202690124512,True,False,True,False
+cam1_0013190215091222203.tif,0.6861116886138916,True,False,True,False
+cam1_0013190215093046302.tif,0.6882996559143066,True,False,True,False
+cam1_0013190215094308104.tif,0.6825273036956787,True,False,True,False
+cam1_0013190215094358304.tif,0.6909048557281494,True,False,True,False
+cam1_0013190215095534304.tif,0.6815030574798584,True,False,True,False
+cam1_0013190215104424201.tif,0.6842775344848633,True,False,True,False
+cam1_0013190215112940303.tif,0.6806819438934326,True,False,True,False
+cam1_0013190215115310201.tif,0.6889798641204834,True,False,True,False
+cam1_0013190215122332104.tif,0.6930439472198486,True,False,True,False
+cam1_0013190215122936104.tif,0.6788597106933594,True,False,True,False
+cam1_0013190215132636303.tif,0.683927059173584,True,False,True,False
+cam1_0013190215132746103.tif,0.6808145046234131,True,True,True,False
+cam1_0013190215135440201.tif,0.6755225658416748,True,False,True,False
+cam1_0013190215142600303.tif,0.6878364086151123,True,False,True,False
+cam1_0013190215144302204.tif,0.7068116664886475,True,False,True,False
+cam1_0013190215150832101.tif,0.6817831993103027,True,False,True,False
+cam1_0013190215151718201.tif,0.6790385246276855,True,False,True,False
+cam1_0013190215170532102.tif,0.6846847534179688,True,False,True,False
+cam1_0013190215212748303.tif,0.6954882144927979,True,False,True,False
+cam1_0013190216073828201.tif,0.6784770488739014,True,False,True,False
+cam1_0013190216082030201.tif,0.6891741752624512,True,False,False,False
+cam1_0013190216102754204.tif,0.6827661991119385,True,False,True,False
+cam1_0013190216102856204.tif,0.6691675186157227,True,False,True,False
+cam1_0013190216103018104.tif,0.6762709617614746,True,False,True,False
+cam1_0013190216103028204.tif,0.6864123344421387,True,False,True,False
+cam1_0013190216104220304.tif,0.6767275333404541,True,False,True,False
+cam1_0013190216112350101.tif,0.6784417629241943,True,False,False,False
+cam1_0013190216112420101.tif,0.6843972206115723,True,True,False,False
+cam1_0013190216112432201.tif,0.6854138374328613,True,True,False,False
+cam1_0013190216122730301.tif,0.6924505233764648,True,False,False,False
+cam1_0013190216133930203.tif,0.6930465698242188,True,True,True,False
+cam1_0013190216140454204.tif,0.6948981285095215,True,True,True,False
+cam1_0013190216141212304.tif,0.6813774108886719,True,True,False,False
+cam1_0013190216142750301.tif,0.6833961009979248,True,True,True,False
+cam1_0013190216151022103.tif,0.6831810474395752,True,False,True,False
+cam1_0013190216152746203.tif,0.679194450378418,True,False,True,False
+cam1_0013190216161510303.tif,0.6784799098968506,True,False,True,False
+cam1_0013190216161904203.tif,0.6965575218200684,True,False,True,False
+cam1_0013190216163122303.tif,0.6783394813537598,True,False,True,False
+cam1_0013190216201040201.tif,0.6757082939147949,True,False,True,False
+cam1_0013190216203344302.tif,0.686434268951416,True,False,True,False
+cam1_0013190216210218102.tif,0.6882407665252686,True,True,True,False
+cam1_0013190216211450303.tif,0.6838464736938477,True,False,True,False
+cam1_0013190216212510104.tif,0.6870298385620117,True,False,True,False
+cam1_0013190216215150302.tif,0.6860332489013672,True,False,True,False
+cam1_0013190216220538304.tif,0.6806373596191406,True,False,False,False
+cam1_0013190216222528101.tif,0.6807105541229248,True,False,True,False
+cam1_0013190216232438204.tif,0.6756281852722168,True,False,True,False
+cam1_0013190216234326204.tif,0.6990253925323486,True,False,True,False
+cam1_0013190217000216302.tif,0.6952295303344727,True,False,False,False
+cam1_0013190217015322204.tif,0.6985058784484863,True,True,False,False
+cam1_0013190217025602304.tif,0.6811823844909668,True,False,False,False
+cam1_0013190217040308303.tif,0.6743941307067871,True,False,True,False
+cam1_0013190217042822202.tif,0.6893978118896484,True,False,False,False
+cam1_0013190217073024202.tif,0.6783297061920166,True,True,True,False
+cam1_0013190217073246102.tif,0.6808063983917236,True,True,False,False
+cam1_0013190217073558202.tif,0.6929545402526855,True,True,False,False
+cam1_0013190217080210303.tif,0.6754682064056396,True,False,True,False
+cam1_0013190217080352103.tif,0.6752049922943115,True,True,True,False
+cam1_0013190217080720101.tif,0.6811718940734863,True,True,False,False
+cam1_0013190217081430102.tif,0.6733896732330322,True,True,False,False
+cam1_0013190217081534102.tif,0.6912524700164795,True,True,False,False
+cam1_0013190217081544202.tif,0.674314022064209,True,True,False,False
+cam1_0013190217081704102.tif,0.6867630481719971,True,False,True,False
+cam1_0013190217082126204.tif,0.6911637783050537,True,True,True,False
+cam1_0013190217082846304.tif,0.6896891593933105,True,True,False,False
+cam1_0013190217083928101.tif,0.6773350238800049,True,True,False,False
+cam1_0013190217085404301.tif,0.6833915710449219,True,True,False,False
+cam1_0013190217091026303.tif,0.6833417415618896,True,True,False,False
+cam1_0013190217123110104.tif,0.6925411224365234,True,True,True,False
+cam1_0013190217142836301.tif,0.678807258605957,True,True,True,False
+cam1_0013190217162200104.tif,0.689549446105957,True,False,True,False
+cam1_0013190217190148302.tif,0.69016432762146,True,True,True,False
+cam1_0013190217191014202.tif,0.6788604259490967,True,False,True,False
+cam1_0013190217213756102.tif,0.6762056350708008,True,False,True,False
+cam1_0013190217213908203.tif,0.6870114803314209,True,False,True,False
+cam1_0013190217213938203.tif,0.6626925468444824,True,False,True,False
+cam1_0013190217214322303.tif,0.6647477149963379,True,False,True,False
+cam1_0013190217221920204.tif,0.6653707027435303,True,False,True,False
+cam1_0013190217224404104.tif,0.658607006072998,True,False,True,False
+cam1_0013190217232254304.tif,0.6578829288482666,True,False,True,False
+cam1_0013190218063344204.tif,0.6760768890380859,True,False,True,False
+cam1_0013190218082154203.tif,0.6741490364074707,True,False,False,False
+cam1_0013190218083132203.tif,0.6622860431671143,True,False,True,False
+cam1_0013190218093604204.tif,0.6639657020568848,True,False,False,False
+cam1_0013190218101630302.tif,0.6522624492645264,True,False,True,False
+cam1_0013190218104148102.tif,0.6691629886627197,True,False,False,False
+cam1_0013190218104644302.tif,0.6724691390991211,True,False,False,False
+cam1_0013190218105352303.tif,0.6746425628662109,True,False,True,False
+cam1_0013190218113218303.tif,0.6576809883117676,True,False,True,False
+cam1_0013190218113622304.tif,0.682999849319458,True,False,True,False
+cam1_0013190218113724304.tif,0.6647677421569824,True,False,False,False
+cam1_0013190218113734104.tif,0.6724362373352051,True,False,False,False
+cam1_0013190218114524301.tif,0.6732549667358398,True,False,True,False
+cam1_0013190218114906101.tif,0.6726341247558594,True,False,True,False
+cam1_0013190218114936101.tif,0.6566545963287354,True,False,True,False
+cam1_0013190218122640304.tif,0.6655192375183105,True,False,True,False
+cam1_0013190218130918301.tif,0.6579728126525879,True,False,True,False
+cam1_0013190218132100301.tif,0.6572933197021484,True,False,False,False
+cam1_0013190218132200301.tif,0.6751546859741211,True,False,True,False
+cam1_0013190218133952303.tif,0.6869661808013916,True,False,True,False
+cam1_0013190218134808102.tif,0.6864993572235107,True,False,True,False
+cam1_0013190218142338304.tif,0.6696727275848389,True,False,True,False
+cam1_0013190218235548203.tif,0.6760876178741455,True,False,False,False
+cam1_0013190219023114304.tif,0.664355993270874,True,False,False,False
+cam1_0013190219034938303.tif,0.663581371307373,True,False,True,False
+cam1_0013190219050842102.tif,0.679652214050293,True,False,False,False
+cam1_0013190219052008202.tif,0.6810076236724854,True,False,True,False
+cam1_0013190219054010302.tif,0.686708927154541,True,False,True,False
+cam1_0013190219063920101.tif,0.690096378326416,True,False,True,False
+cam1_0013190219064950301.tif,0.6609201431274414,True,False,True,False
+cam1_0013190219092140202.tif,0.6615784168243408,True,False,True,False
+cam1_0013190219095150303.tif,0.6764543056488037,True,False,True,False
+cam1_0013190219100020203.tif,0.673790454864502,True,False,True,False
+cam1_0013190219123136101.tif,0.6586108207702637,True,True,False,False
+cam1_0013190219133012203.tif,0.6724472045898438,True,False,True,False
+cam1_0013190219133842104.tif,0.6564524173736572,True,False,True,False
+cam1_0013190219175230203.tif,0.6739492416381836,True,False,False,False
+cam1_0013190220034038202.tif,0.6726014614105225,True,False,False,False
+cam1_0013190220040636204.tif,0.6682465076446533,True,False,False,False
+cam1_0013190220100540202.tif,0.6996288299560547,True,False,True,False
+cam1_0013190220162652101.tif,0.6824982166290283,True,True,False,False
+cam1_0013190220173452301.tif,0.6890814304351807,True,True,False,False
+cam1_0013190220173704101.tif,0.6960437297821045,True,True,False,False
+cam1_0013190220174614101.tif,0.67899489402771,True,True,False,False
+cam1_0013190220174624201.tif,0.6850426197052002,True,True,False,False
+cam1_0013190220174734301.tif,0.6849837303161621,True,True,True,False
+cam1_0013190220233926202.tif,0.6873643398284912,True,False,False,False
+cam1_0013190221025002303.tif,0.6826808452606201,True,False,False,False
+cam1_0013190221032752104.tif,0.6715312004089355,True,False,False,False
+cam1_0013190221055812301.tif,0.6688876152038574,True,False,False,False
+cam1_0013190221062510301.tif,0.6829814910888672,True,False,False,False
+cam1_0013190221062926101.tif,0.6701505184173584,True,False,False,False
+cam1_0013190221210552104.tif,0.6706681251525879,True,False,True,False
+cam1_0013190221211532201.tif,0.6795070171356201,True,False,True,False
+cam1_0013190221214118102.tif,0.6853117942810059,True,False,True,False
+cam1_0013190221215302104.tif,0.6747150421142578,True,False,True,False
+cam1_0013190221221312101.tif,0.6761281490325928,True,False,True,False
+cam1_0013190221222240301.tif,0.674422025680542,True,False,True,False
+cam1_0013190222051754303.tif,0.6850106716156006,True,False,True,False
+cam1_0013190222053954202.tif,0.6838819980621338,True,False,True,False
+cam1_0013190222193900203.tif,0.6801633834838867,True,False,True,False
+cam1_0013190222233726203.tif,0.6820991039276123,True,True,False,False
+cam1_0013190223002036203.tif,0.7099010944366455,True,False,False,False
+cam1_0013190223155348301.tif,0.6855823993682861,True,False,False,False
+cam1_0013190223155700302.tif,0.6818151473999023,True,False,False,False
+cam1_0013190223155712102.tif,0.6967670917510986,True,False,False,False
+cam1_0013190223202922202.tif,0.6855390071868896,True,False,False,False
+cam1_0013190223222400202.tif,0.679513692855835,True,False,False,False
+cam1_0013190223222412302.tif,0.6812458038330078,True,True,False,False
+cam1_0013190223222432202.tif,0.6825668811798096,True,True,False,False
+cam1_0013190223222524102.tif,0.683173418045044,True,True,False,False
+cam1_0013190223222536202.tif,0.6958596706390381,True,True,False,False
+cam1_0013190223223204302.tif,0.6747310161590576,True,True,False,False
+cam1_0013190225223114104.tif,0.6750500202178955,True,False,False,False
+cam1_0013190226045020202.tif,0.6920568943023682,True,False,False,True
+cam1_0013190227052246301.tif,0.6847710609436035,True,False,False,False
+cam1_0013190227055742301.tif,0.6710703372955322,True,False,False,False
+cam1_0013190227114400101.tif,0.6821057796478271,True,False,False,False
+cam1_0013190227235950101.tif,0.6839282512664795,True,False,False,False
+cam1_0013190301024222203.tif,0.6742959022521973,True,False,False,False
+cam1_0013190301051852301.tif,0.6909713745117188,True,False,False,False
+cam1_0013190301142214101.tif,0.6925966739654541,True,False,False,False
+cam1_0013190301211528304.tif,0.6779544353485107,True,False,False,False
+cam1_0013190303052534102.tif,0.706336498260498,True,False,True,False
+cam1_0013190303065400103.tif,0.6805768013000488,True,False,False,False
+cam1_0013190303074750302.tif,0.6775548458099365,True,False,False,False
+cam1_0013190303203308203.tif,0.6799721717834473,True,False,True,False
+cam1_0013190303204840204.tif,0.6791315078735352,True,False,False,False
+cam1_0013190304025510103.tif,0.6672213077545166,True,False,True,False
+cam1_0013190304052224104.tif,0.677257776260376,True,False,False,False
+cam1_0013190305061340201.tif,0.6693596839904785,True,False,False,False
+cam1_0013190306140002204.tif,0.6680591106414795,True,False,True,False
+cam1_0013190307025640101.tif,0.6687862873077393,True,False,False,False
+cam1_0013190307072344202.tif,0.680854082107544,True,False,False,False
+cam1_0013190308092146302.tif,0.6694796085357666,True,False,False,False
+cam1_0013190308094534102.tif,0.6725919246673584,True,False,False,False
+cam1_0013190308124902201.tif,0.6722962856292725,True,False,False,False
+cam1_0013190308125208201.tif,0.6570603847503662,True,True,False,False
+cam1_0013190308134544101.tif,0.6706781387329102,True,False,False,False
+cam1_0013190309033600104.tif,0.6788289546966553,True,False,False,False
+cam1_0013190309150526303.tif,0.6768431663513184,True,False,True,False
+cam1_0013190309225114204.tif,0.6685845851898193,True,False,False,False
+cam1_0013190310054634304.tif,0.68404221534729,True,True,False,False
+cam1_0013190310055834204.tif,0.6988060474395752,True,False,False,False
+cam1_0013190310114308303.tif,0.6745009422302246,True,False,False,False
+cam1_0013190310232534204.tif,0.686091423034668,True,False,False,False
+cam1_0013190311000914104.tif,0.6688485145568848,True,False,True,False
+cam1_0013190312130440202.tif,0.6651394367218018,True,False,True,False
+cam1_0013190313045544303.tif,0.661935567855835,True,True,False,False
+cam1_0013190314025658303.tif,0.6674399375915527,True,False,False,False
+cam1_0013190314035928104.tif,0.6741170883178711,True,False,False,False
+cam1_0013190314055856104.tif,0.6660864353179932,True,False,False,False
+cam1_0013190314202402101.tif,0.6760270595550537,True,False,False,False
+cam1_0013190316023242204.tif,0.6684894561767578,True,False,True,False
+cam1_0013190316023452204.tif,0.6736502647399902,True,False,False,False
+cam1_0013190316124728303.tif,0.684699535369873,True,True,False,False
+cam1_0013190316124822203.tif,0.7040891647338867,True,True,False,False
+cam1_0013190316124832303.tif,0.682769775390625,True,True,False,False
+cam1_0013190316125008303.tif,0.6848189830780029,True,True,False,False
+cam1_0013190316125310203.tif,0.689324140548706,True,True,False,False
+cam1_0013190316154334103.tif,0.6767065525054932,True,False,False,False
+cam1_0013190317191738101.tif,0.6777849197387695,True,False,False,False
+cam1_0013190318042656303.tif,0.6703305244445801,True,False,False,False
+cam1_0013190319073002303.tif,0.6685659885406494,True,True,False,False
+cam1_0013190320134134301.tif,0.6681680679321289,True,False,True,False
+cam1_0013190320175204102.tif,0.6687438488006592,True,True,False,False
+cam1_0013190321074142204.tif,0.6626243591308594,True,True,False,False
+cam1_0013190321190744201.tif,0.6681976318359375,True,True,False,False
+cam1_0013190322124252303.tif,0.6802403926849365,True,False,False,False
+cam1_0013190322131644103.tif,0.6643657684326172,True,False,False,False
+cam1_0013190322145002202.tif,0.6754937171936035,True,True,False,False
+cam1_0013190322150136202.tif,0.6666431427001953,True,True,False,False
+cam1_0013190324071158102.tif,0.6651656627655029,True,True,False,False
+cam1_0013190325032602102.tif,0.6846117973327637,True,True,False,False
+cam1_0013190325114724202.tif,0.6677000522613525,True,False,False,False
+cam1_0013190326124206202.tif,0.6702592372894287,True,False,False,True
+cam1_0013190326162626101.tif,0.6838216781616211,True,False,False,False
+cam1_0013190326213128203.tif,0.658184289932251,True,False,True,False
+cam1_0013190326230506202.tif,0.6665098667144775,True,True,False,False
+cam1_0013190326231224201.tif,0.6715116500854492,True,True,False,False
+cam1_0013190326234002104.tif,0.670905351638794,True,True,False,False
+cam1_0013190327005118104.tif,0.6786906719207764,True,True,False,False
+cam1_0013190327021608302.tif,0.6700255870819092,True,False,False,True
+cam1_0013190329062112303.tif,0.6998963356018066,True,False,True,False
+cam1_0013190330075218203.tif,0.6833112239837646,True,False,False,False
+cam1_0013190330075530204.tif,0.679318904876709,True,False,False,False
+cam1_0013190330111910301.tif,0.6885368824005127,True,False,False,False
+cam1_0013190331103504102.tif,0.6769211292266846,True,True,False,False
+cam1_0013190401063416102.tif,0.674614429473877,True,False,False,False
+cam1_0013190401231100102.tif,0.6817188262939453,True,False,True,False
+cam1_0013190402222742101.tif,0.6754143238067627,True,False,False,False
+cam1_0013190402225914204.tif,0.6757187843322754,True,True,False,False
+cam1_0013190403002558104.tif,0.686159610748291,True,True,False,False
+cam1_0013190403031710101.tif,0.6805393695831299,True,False,False,False
+cam1_0016190203184647102.tif,0.6787981986999512,True,False,True,False
+cam1_0016190208013944203.tif,0.7120099067687988,True,False,False,True
+cam1_0016190208014035202.tif,0.685950517654419,True,True,False,False
+cam1_0016190212205726304.tif,0.6667404174804688,True,False,False,True
+cam1_0016190215222743304.tif,0.6929874420166016,True,False,False,False
+cam1_0016190216024025304.tif,0.6959655284881592,True,False,False,False
+cam1_0016190216045214304.tif,0.688331127166748,True,False,False,False
+cam1_0016190216050944302.tif,0.719719409942627,True,False,False,True
+cam1_0016190216063234304.tif,0.6828644275665283,True,False,False,False
+cam1_0016190216101014204.tif,0.6881248950958252,True,False,False,False
+cam1_0016190217113613304.tif,0.684955358505249,True,False,False,True
+cam1_0016190218074535104.tif,0.6994078159332275,True,False,False,True
+cam1_0016190218164507204.tif,0.6914615631103516,True,False,False,True
+cam1_0016190221002745302.tif,0.6741163730621338,True,True,False,False
+cam1_0016190224205703101.tif,0.6847991943359375,True,True,False,False
+cam1_0016190225233904303.tif,0.706671953201294,True,False,False,False
+cam1_0016190226000848201.tif,0.7035598754882812,True,True,False,False
+cam1_0016190227024202204.tif,0.6957874298095703,True,False,False,True
+cam1_0016190227173958204.tif,0.6957952976226807,True,False,False,True
+cam1_0016190305171750104.tif,0.6778876781463623,True,False,False,True
+cam1_0016190315201247103.tif,0.7029027938842773,True,False,False,False
+cam1_0016190316033835202.tif,0.6859433650970459,True,True,False,False
+cam1_0016190316033903202.tif,0.6958723068237305,True,True,False,False
+cam1_0016190316033920102.tif,0.711822509765625,True,True,False,False
+cam1_0016190316033948102.tif,0.6757137775421143,True,True,False,False
+cam1_0016190316035814302.tif,0.686110258102417,True,True,False,False
+cam1_0016190316044704102.tif,0.71248459815979,True,True,False,False
+cam1_0016190316170715101.tif,0.7097325325012207,True,True,False,False
+cam1_0016190316171300303.tif,0.7204887866973877,True,True,False,False
+cam1_0016190319153547102.tif,0.6814148426055908,True,False,False,False
+cam1_0016190319192917304.tif,0.6766726970672607,True,False,False,False
+cam1_0016190324164540302.tif,0.6887660026550293,True,False,False,False
+cam1_0016190324232403204.tif,0.6848483085632324,True,False,False,False
+cam1_0016190330120640102.tif,0.6917448043823242,True,False,False,True
+cam1_0016190401191845101.tif,0.688892126083374,True,False,False,False
+cam1_0016190401192648104.tif,0.6896622180938721,True,True,False,False
+cam1_0016190401192716104.tif,0.7035558223724365,True,True,False,True
+cam1_9999190207110504004.tif,0.6904425621032715,True,False,False,False
+cam1_9999190306015039066.tif,0.6767549514770508,True,False,False,False
+cam1_9999190306020539415.tif,0.6703207492828369,True,False,False,False
+cam1_9999190306033227105.tif,0.671393871307373,True,False,False,False
+cam1_9999190306035627623.tif,0.7000026702880859,True,False,False,False
+cam1_9999190306040214763.tif,0.6863336563110352,True,False,False,False
+cam1_9999190306041721121.tif,0.7131283283233643,True,False,False,False
+cam1_9999190306042634345.tif,0.7082014083862305,True,False,False,False
+cam1_9999190306061234554.tif,0.7095856666564941,True,False,False,False
+cam1_9999190306063345055.tif,0.6913011074066162,True,False,False,False
+cam1_9999190306063642136.tif,0.6953084468841553,True,False,False,True
+cam1_9999190306064533345.tif,0.7366616725921631,True,False,False,False
+cam1_9999190306064807406.tif,0.6916584968566895,True,True,False,False
+cam1_9999190306071803708.tif,0.7119104862213135,True,False,False,False
+cam1_9999190306073823127.tif,0.7028038501739502,True,False,False,True
+cam1_9999190306095444933.tif,0.7001631259918213,True,False,False,False
+cam1_9999190314075921890.tif,0.7029812335968018,True,True,False,False
+cam1_9999190314081150054.tif,0.7177703380584717,True,True,False,False
+cam1_9999190314081708155.tif,0.7144036293029785,True,False,False,False
+cam1_9999190320105244394.tif,0.7100124359130859,True,False,False,False
+cam1_9999190320105526465.tif,0.699843168258667,True,False,False,False
+cam1_9999190320105743524.tif,0.7007918357849121,True,False,False,False
+cam1_9999190320112310856.tif,0.6978580951690674,True,False,False,False
+cam1_9999190320112332868.tif,0.6998982429504395,True,False,False,False
+cam1_9999190320113601207.tif,0.6839148998260498,True,False,False,False
+cam1_9999190320114200352.tif,0.6650791168212891,True,False,False,False
+cam1_9999190320114343392.tif,0.6869425773620605,True,False,False,False
+cam1_9999190320114527435.tif,0.6987228393554688,True,False,False,False
+cam1_9999190320121115913.tif,0.6780076026916504,True,False,False,False
+cam1_9999190320121651029.tif,0.7000181674957275,True,False,False,False
+cam1_9999190320123725474.tif,0.6788222789764404,True,False,False,False
+cam1_9999190320124251599.tif,0.7077689170837402,True,False,False,False
+cam1_9999190320150508279.tif,0.6798582077026367,True,False,False,False
+cam1_9999190320160213663.tif,0.6728761196136475,True,True,False,False
+cam1_9999190320162533087.tif,0.6808297634124756,True,True,False,False
+cam1_9999190320163228268.tif,0.6955444812774658,True,True,False,False
+cam1_9999190320164007474.tif,0.6874301433563232,True,True,False,False
+cam1_9999190320164232538.tif,0.6770522594451904,True,True,False,False
+cam1_9999190320164326560.tif,0.6788983345031738,True,True,False,False
+cam1_9999190320170938192.tif,0.6865036487579346,True,True,False,False
+cam1_9999190320171411233.tif,0.6818351745605469,True,True,False,False
+cam2_0013190122071044202.tif,0.6780023574829102,True,False,False,False
+cam2_0013190122072106104.tif,0.6876916885375977,True,False,False,False
+cam2_0013190122084902101.tif,0.6819713115692139,True,False,False,False
+cam2_0013190122090648303.tif,0.6754615306854248,True,False,False,False
+cam2_0013190122093648203.tif,0.6929998397827148,True,False,False,False
+cam2_0013190122094158301.tif,0.6782894134521484,True,False,False,False
+cam2_0013190122094218201.tif,0.6832771301269531,True,False,False,False
+cam2_0013190122094436302.tif,0.6871142387390137,True,False,False,False
+cam2_0013190122095838104.tif,0.6765313148498535,True,False,False,False
+cam2_0013190122164446103.tif,0.6842052936553955,True,False,False,False
+cam2_0013190122164530204.tif,0.6883959770202637,True,False,False,False
+cam2_0013190122165020304.tif,0.6746261119842529,True,False,False,False
+cam2_0013190122191142101.tif,0.6768772602081299,True,False,False,False
+cam2_0013190122195420301.tif,0.6807956695556641,True,False,False,False
+cam2_0013190122204116101.tif,0.6764278411865234,True,False,False,False
+cam2_0013190122210440301.tif,0.6879823207855225,True,False,False,False
+cam2_0013190122210620304.tif,0.6840100288391113,True,False,False,False
+cam2_0013190122212732104.tif,0.681328535079956,True,False,False,False
+cam2_0013190123094552102.tif,0.6811130046844482,True,True,False,False
+cam2_0013190125013516301.tif,0.6773407459259033,True,False,True,False
+cam2_0013190125135530203.tif,0.6839537620544434,True,False,True,False
+cam2_0013190202145922201.tif,0.6811349391937256,True,True,False,False
+cam2_0013190202145942101.tif,0.6862256526947021,True,True,False,False
+cam2_0013190203101526202.tif,0.6772067546844482,True,False,False,False
+cam2_0013190204091546103.tif,0.6795828342437744,True,True,True,False
+cam2_0013190204120616203.tif,0.6724607944488525,True,True,False,False
+cam2_0013190204120718203.tif,0.6796135902404785,True,True,False,False
+cam2_0013190204154452204.tif,0.6828927993774414,True,False,True,False
+cam2_0013190204180820201.tif,0.6882541179656982,True,True,True,False
+cam2_0013190205143816101.tif,0.6807270050048828,True,True,False,False
+cam2_0013190207091918202.tif,0.6765408515930176,True,False,False,False
+cam2_0013190207112008101.tif,0.6826989650726318,True,False,False,False
+cam2_0013190207120226203.tif,0.6864094734191895,True,False,False,False
+cam2_0013190207121710103.tif,0.6809685230255127,True,False,False,False
+cam2_0013190207131022303.tif,0.6884143352508545,True,False,False,False
+cam2_0013190207133246203.tif,0.6770634651184082,True,False,False,False
+cam2_0013190207135138103.tif,0.6834409236907959,True,False,False,False
+cam2_0013190208063200201.tif,0.6840088367462158,True,True,False,False
+cam2_0013190208064712102.tif,0.6860337257385254,True,False,False,False
+cam2_0013190208192610203.tif,0.6917831897735596,True,False,False,False
+cam2_0013190209061422303.tif,0.680870771408081,True,False,False,False
+cam2_0013190209071112204.tif,0.6664509773254395,True,False,False,False
+cam2_0013190209092138302.tif,0.6894230842590332,True,False,False,False
+cam2_0013190210124522102.tif,0.6748926639556885,True,False,False,False
+cam2_0013190210184242101.tif,0.6796789169311523,True,False,False,False
+cam2_0013190211191626203.tif,0.688931941986084,True,False,False,False
+cam2_0013190212071704204.tif,0.6803319454193115,True,True,False,False
+cam2_0013190212101012104.tif,0.6867682933807373,True,False,False,False
+cam2_0013190213174034303.tif,0.6710577011108398,True,False,False,False
+cam2_0013190214055536102.tif,0.6806085109710693,True,False,False,False
+cam2_0013190214060236304.tif,0.6819705963134766,True,False,False,False
+cam2_0013190214223200201.tif,0.690009355545044,True,False,False,False
+cam2_0013190216054314104.tif,0.6960046291351318,True,False,True,False
+cam2_0013190216142854302.tif,0.6779861450195312,True,True,False,True
+cam2_0013190217015304101.tif,0.6786901950836182,True,False,False,False
+cam2_0013190217183054101.tif,0.6871633529663086,True,False,False,False
+cam2_0013190217210334203.tif,0.6775593757629395,True,False,False,False
+cam2_0013190217211348301.tif,0.6758785247802734,True,True,False,False
+cam2_0013190219021844104.tif,0.682410478591919,True,False,False,False
+cam2_0013190219022522201.tif,0.6894237995147705,True,True,False,False
+cam2_0013190219022542101.tif,0.6855614185333252,True,False,False,False
+cam2_0013190219043832302.tif,0.6895277500152588,True,False,True,False
+cam2_0013190220104204102.tif,0.6810050010681152,True,False,False,False
+cam2_0013190221003146202.tif,0.6916670799255371,True,False,True,False
+cam2_0013190222100526201.tif,0.6855278015136719,True,False,False,False
+cam2_0013190222210746201.tif,0.6901586055755615,True,False,True,True
+cam2_0013190222232414103.tif,0.679112434387207,True,False,False,False
+cam2_0013190222234340203.tif,0.6778984069824219,True,False,True,False
+cam2_0013190223070536204.tif,0.6771962642669678,True,False,False,False
+cam2_0013190223151412101.tif,0.6741750240325928,True,False,False,False
+cam2_0013190224154702301.tif,0.6806662082672119,True,False,False,False
+cam2_0013190224223000101.tif,0.684586763381958,True,False,False,False
+cam2_0013190224230908204.tif,0.6703062057495117,True,False,False,False
+cam2_0013190226140510103.tif,0.6964442729949951,True,False,False,False
+cam2_0013190228063008202.tif,0.6734497547149658,True,False,False,False
+cam2_0013190301042106303.tif,0.6742033958435059,True,False,False,False
+cam2_0013190301211934301.tif,0.6771161556243896,True,True,False,False
+cam2_0013190302084118104.tif,0.6741266250610352,True,False,False,False
+cam2_0013190302215214202.tif,0.6719896793365479,True,True,False,False
+cam2_0013190303052018103.tif,0.6792716979980469,True,False,False,False
+cam2_0013190304042532301.tif,0.6775925159454346,True,False,False,False
+cam2_0013190304082810202.tif,0.6775810718536377,True,False,False,False
+cam2_0013190304094322301.tif,0.6735506057739258,True,False,False,False
+cam2_0013190304110600102.tif,0.6716628074645996,True,False,False,False
+cam2_0013190304141326104.tif,0.6811950206756592,True,False,False,False
+cam2_0013190304142538103.tif,0.6814484596252441,True,False,False,False
+cam2_0013190304142544201.tif,0.6875567436218262,True,False,False,False
+cam2_0013190304153640204.tif,0.6691141128540039,True,False,False,False
+cam2_0013190304160222101.tif,0.6891202926635742,True,False,False,False
+cam2_0013190304160300103.tif,0.6727628707885742,True,False,False,False
+cam2_0013190304160356304.tif,0.6868834495544434,True,False,False,False
+cam2_0013190306021626203.tif,0.6900453567504883,True,False,False,False
+cam2_0013190307024858202.tif,0.6758067607879639,True,False,False,False
+cam2_0013190307055158204.tif,0.6758816242218018,True,False,False,False
+cam2_0013190308040732301.tif,0.6829578876495361,True,False,False,False
+cam2_0013190308113022201.tif,0.666445255279541,True,False,False,False
+cam2_0013190309001342101.tif,0.6696574687957764,True,False,False,False
+cam2_0013190309090034303.tif,0.6839559078216553,True,False,False,False
+cam2_0013190309144220303.tif,0.6851823329925537,True,False,False,False
+cam2_0013190310055318301.tif,0.6798892021179199,True,False,False,False
+cam2_0013190310093350301.tif,0.6806721687316895,True,False,False,False
+cam2_0013190310093400101.tif,0.6908011436462402,True,False,False,False
+cam2_0013190312033822102.tif,0.6749043464660645,True,False,False,False
+cam2_0013190312224540301.tif,0.6839261054992676,True,True,False,False
+cam2_0013190313165926304.tif,0.6806018352508545,True,False,False,False
+cam2_0013190313202100101.tif,0.6811408996582031,True,False,False,False
+cam2_0013190314000232104.tif,0.6734104156494141,True,True,True,False
+cam2_0013190315081500301.tif,0.6787898540496826,True,False,False,False
+cam2_0013190315231336201.tif,0.6947081089019775,True,True,False,False
+cam2_0013190319010628104.tif,0.6574294567108154,True,False,False,False
+cam2_0013190319203030204.tif,0.663787841796875,True,False,False,False
+cam2_0013190320151050201.tif,0.6859230995178223,True,False,False,False
+cam2_0013190321072324303.tif,0.6619589328765869,True,True,False,False
+cam2_0013190321144020303.tif,0.6559221744537354,True,False,False,False
+cam2_0013190321155852204.tif,0.6825664043426514,True,True,False,False
+cam2_0013190321160016104.tif,0.6648471355438232,True,True,False,False
+cam2_0013190321161432202.tif,0.6674368381500244,True,False,False,False
+cam2_0013190321164630101.tif,0.6640114784240723,True,False,False,False
+cam2_0013190323032642303.tif,0.6464424133300781,True,False,True,False
+cam2_0013190323213646102.tif,0.6692895889282227,True,False,False,False
+cam2_0013190324141208104.tif,0.6677556037902832,True,True,False,False
+cam2_0013190325203904101.tif,0.6567869186401367,True,False,False,False
+cam2_0013190326191920304.tif,0.6806831359863281,True,False,False,False
+cam2_0013190327004912103.tif,0.6639924049377441,True,True,False,False
+cam2_0013190329004628202.tif,0.6485085487365723,True,False,False,False
+cam2_0013190329004700202.tif,0.6802165508270264,True,False,True,False
+cam2_0013190329012526203.tif,0.6679184436798096,True,False,True,False
+cam2_0013190329021626204.tif,0.6613626480102539,True,False,True,False
+cam2_0013190329095834103.tif,0.6541588306427002,True,False,False,True
+cam2_0013190329102808104.tif,0.6657881736755371,True,False,False,False
+cam2_0013190330045516302.tif,0.6683602333068848,True,False,False,False
+cam2_0013190330074134304.tif,0.6637251377105713,True,False,False,False
+cam2_0013190330081406201.tif,0.6671857833862305,True,False,False,False
+cam2_0013190330103920204.tif,0.6631717681884766,True,False,False,False
+cam2_0013190330105936301.tif,0.6596329212188721,True,False,True,False
+cam2_0013190330111236301.tif,0.6726644039154053,True,False,False,False
+cam2_0013190330121406202.tif,0.6546347141265869,True,False,False,False
+cam2_0013190331044708102.tif,0.6575844287872314,True,False,False,False
+cam2_0013190401133012203.tif,0.6584727764129639,True,False,False,False
+cam2_0013190402003530301.tif,0.6564593315124512,True,False,False,False
+cam2_0013190402003910301.tif,0.6524991989135742,True,False,False,False
+cam2_0013190402014658102.tif,0.6676182746887207,True,False,False,True
+cam2_0013190402220722204.tif,0.6590156555175781,True,False,False,False
+cam2_0013190403070150202.tif,0.6519958972930908,True,True,False,False
+cam2_0016190202142558204.tif,0.7096643447875977,True,False,False,True
+cam2_0016190203171759301.tif,0.7104322910308838,True,False,False,True
+cam2_0016190204170030304.tif,0.6781644821166992,True,False,True,False
+cam2_0016190209232436201.tif,0.692955732345581,True,False,False,True
+cam2_0016190218230427201.tif,0.661811351776123,True,False,False,True
+cam2_0016190221030732301.tif,0.655024528503418,True,True,False,False
+cam2_0016190301133907204.tif,0.6832249164581299,True,False,False,True
+cam2_0016190302192847304.tif,0.6563634872436523,True,False,False,True
+cam2_0016190307063953304.tif,0.7016620635986328,True,False,True,False
+cam2_0016190307124109201.tif,0.6698257923126221,True,False,False,False
+cam2_0016190307124128101.tif,0.6981000900268555,True,False,False,False
+cam2_0016190307124242301.tif,0.6845836639404297,True,False,False,False
+cam2_0016190307125805101.tif,0.6854584217071533,True,False,False,False
+cam2_0016190307125936201.tif,0.6672878265380859,True,False,False,False
+cam2_0016190307130507202.tif,0.6750741004943848,True,False,False,False
+cam2_0016190307131739204.tif,0.6826012134552002,True,False,False,False
+cam2_0016190307132436204.tif,0.695094108581543,True,False,False,False
+cam2_0016190307133322204.tif,0.6747996807098389,True,False,False,False
+cam2_0016190307135611302.tif,0.6857264041900635,True,False,False,False
+cam2_0016190307143952204.tif,0.6758592128753662,True,False,False,False
+cam2_0016190307144739302.tif,0.6788032054901123,True,False,True,False
+cam2_0016190307150235104.tif,0.6777465343475342,True,False,False,False
+cam2_0016190307153839102.tif,0.6732347011566162,True,False,False,False
+cam2_0016190307164607202.tif,0.6959664821624756,True,False,False,False
+cam2_0016190307165105302.tif,0.678922176361084,True,False,False,False
+cam2_0016190307170419103.tif,0.6764240264892578,True,False,False,False
+cam2_0016190307170550203.tif,0.6717312335968018,True,False,False,False
+cam2_0016190307172402202.tif,0.6878080368041992,True,False,False,False
+cam2_0016190307180808201.tif,0.668057918548584,True,False,False,False
+cam2_0016190307181303101.tif,0.6875710487365723,True,False,False,False
+cam2_0016190307182214204.tif,0.682135820388794,True,False,False,False
+cam2_0016190307183309104.tif,0.6733365058898926,True,False,False,False
+cam2_0016190307190241102.tif,0.6890430450439453,True,False,False,False
+cam2_0016190307193558304.tif,0.6858546733856201,True,False,False,False
+cam2_0016190307200342303.tif,0.6886851787567139,True,False,False,False
+cam2_0016190307201817203.tif,0.6836187839508057,True,False,False,False
+cam2_0016190307204434202.tif,0.681041955947876,True,False,False,False
+cam2_0016190307205029104.tif,0.6727797985076904,True,False,False,False
+cam2_0016190307211951304.tif,0.6836802959442139,True,False,False,False
+cam2_0016190307213347102.tif,0.6765246391296387,True,False,False,False
+cam2_0016190307213856103.tif,0.6773715019226074,True,False,False,False
+cam2_0016190307215640203.tif,0.6855063438415527,True,False,False,False
+cam2_0016190307220418103.tif,0.684314489364624,True,False,False,False
+cam2_0016190307222320302.tif,0.6801917552947998,True,False,False,False
+cam2_0016190307223126103.tif,0.6830742359161377,True,False,False,False
+cam2_0016190307224909203.tif,0.6871399879455566,True,False,False,False
+cam2_0016190307225915303.tif,0.6855406761169434,True,True,False,False
+cam2_0016190307232705201.tif,0.6911017894744873,True,False,True,False
+cam2_0016190307232959301.tif,0.6686792373657227,True,True,False,False
+cam2_0016190307233425202.tif,0.6726436614990234,True,True,False,False
+cam2_0016190307235610204.tif,0.7043235301971436,True,False,False,False
+cam2_0016190308005152301.tif,0.6843888759613037,True,False,False,False
+cam2_0016190308005220301.tif,0.6881453990936279,True,False,False,False
+cam2_0016190308005235202.tif,0.6735517978668213,True,False,False,False
+cam2_0016190308005409302.tif,0.6733560562133789,True,False,False,False
+cam2_0016190308005628302.tif,0.6876707077026367,True,False,False,False
+cam2_0016190308011022302.tif,0.6855757236480713,True,False,False,False
+cam2_0016190308011257202.tif,0.690237283706665,True,False,False,False
+cam2_0016190308011344102.tif,0.686272144317627,True,False,False,False
+cam2_0016190308011353202.tif,0.6851706504821777,True,False,False,False
+cam2_0016190308013413103.tif,0.6786155700683594,True,False,False,False
+cam2_0016190308014309203.tif,0.6780078411102295,True,False,False,False
+cam2_0016190308020540303.tif,0.6848404407501221,True,False,False,False
+cam2_0016190308025254203.tif,0.6780128479003906,True,False,False,False
+cam2_0016190308025401304.tif,0.6839196681976318,True,False,False,False
+cam2_0016190308030007201.tif,0.672015905380249,True,False,False,False
+cam2_0016190308030559103.tif,0.6742568016052246,True,False,False,False
+cam2_0016190308031435301.tif,0.7221951484680176,True,False,False,False
+cam2_0016190308031537303.tif,0.6751797199249268,True,False,False,False
+cam2_0016190308031619103.tif,0.6780741214752197,True,False,False,False
+cam2_0016190308032336104.tif,0.6792299747467041,True,False,True,False
+cam2_0016190308032439202.tif,0.6842212677001953,True,False,False,False
+cam2_0016190308032655102.tif,0.6715574264526367,True,False,False,False
+cam2_0016190308035216101.tif,0.6798505783081055,True,False,False,False
+cam2_0016190308044110204.tif,0.6841344833374023,True,False,False,False
+cam2_0016190308045014104.tif,0.6786844730377197,True,False,False,False
+cam2_0016190308045034304.tif,0.6833968162536621,True,False,False,False
+cam2_0016190308045631301.tif,0.6814403533935547,True,False,False,False
+cam2_0016190308051258201.tif,0.6734888553619385,True,False,False,False
+cam2_0016190308051733202.tif,0.6877155303955078,True,False,False,False
+cam2_0016190308052556103.tif,0.6817920207977295,True,False,False,False
+cam2_0016190308053312304.tif,0.676703691482544,True,True,False,False
+cam2_0016190308060244103.tif,0.6764187812805176,True,False,False,False
+cam2_0016190308060414203.tif,0.6802823543548584,True,False,False,False
+cam2_0016190308071132303.tif,0.6769909858703613,True,False,False,False
+cam2_0016190308071437203.tif,0.6840758323669434,True,False,True,False
+cam2_0016190308071845204.tif,0.6911704540252686,True,False,True,False
+cam2_0016190308074050201.tif,0.6754345893859863,True,False,False,False
+cam2_0016190308081202301.tif,0.6973822116851807,True,False,False,False
+cam2_0016190308081657102.tif,0.6955235004425049,True,False,False,False
+cam2_0016190308081829202.tif,0.6792678833007812,True,False,False,False
+cam2_0016190308082207103.tif,0.6747620105743408,True,False,False,False
+cam2_0016190308090640304.tif,0.683349609375,True,False,True,False
+cam2_0016190309034332304.tif,0.6877267360687256,True,False,False,False
+cam2_0016190319184244203.tif,0.6909949779510498,True,False,False,False
+cam2_9999190306014228845.tif,0.6775977611541748,True,False,False,False
+cam2_9999190306014259861.tif,0.6900863647460938,True,False,False,False
+cam2_9999190306014635971.tif,0.6865277290344238,True,False,False,False
+cam2_9999190306015222106.tif,0.6754920482635498,True,False,False,False
+cam2_9999190306020236341.tif,0.6799764633178711,True,False,False,False
+cam2_9999190306020642436.tif,0.6784999370574951,True,False,False,False
+cam2_9999190306021537508.tif,0.6810812950134277,True,False,False,False
+cam2_9999190306021630528.tif,0.6769154071807861,True,False,False,False
+cam2_9999190306021654540.tif,0.6841011047363281,True,False,False,False
+cam2_9999190306022356741.tif,0.6882858276367188,True,False,False,False
+cam2_9999190306031937793.tif,0.6770727634429932,True,False,False,False
+cam2_9999190306032015809.tif,0.686591625213623,True,False,False,False
+cam2_9999190306032647957.tif,0.6819825172424316,True,False,False,False
+cam2_9999190306033218102.tif,0.6738083362579346,True,False,False,False
+cam2_9999190306033236110.tif,0.7261817455291748,True,False,False,False
+cam2_9999190306034617354.tif,0.6792988777160645,True,False,False,False
+cam2_9999190306040204756.tif,0.6825275421142578,True,False,False,False
+cam2_9999190306040630862.tif,0.677800178527832,True,False,False,False
+cam2_9999190306043555570.tif,0.6787323951721191,True,False,False,False
+cam2_9999190306045417747.tif,0.6918413639068604,True,False,False,False
+cam2_9999190306051459280.tif,0.6838195323944092,True,False,False,False
+cam2_9999190306051547300.tif,0.6876094341278076,True,False,False,False
+cam2_9999190306051651324.tif,0.6904160976409912,True,False,False,False
+cam2_9999190306051817360.tif,0.6885952949523926,True,False,False,False
+cam2_9999190306052550468.tif,0.681006908416748,True,False,False,False
+cam2_9999190306052853560.tif,0.682471513748169,True,False,False,False
+cam2_9999190306053207617.tif,0.6812796592712402,True,False,False,False
+cam2_9999190306054733921.tif,0.6848580837249756,True,False,False,False
+cam2_9999190306060148293.tif,0.6838345527648926,True,False,False,False
+cam2_9999190306060446365.tif,0.6844069957733154,True,False,False,False
+cam2_9999190306062137769.tif,0.678337812423706,True,False,False,False
+cam2_9999190306062146773.tif,0.6907927989959717,True,False,False,False
+cam2_9999190306064024221.tif,0.6923930644989014,True,False,False,False
+cam2_9999190306064033225.tif,0.6940138339996338,True,False,True,False
+cam2_9999190306064312290.tif,0.7157275676727295,True,False,False,False
+cam2_9999190306064942444.tif,0.6748743057250977,True,False,True,False
+cam2_9999190306070917580.tif,0.6830143928527832,True,False,False,False
+cam2_9999190306072004753.tif,0.6813523769378662,True,False,False,False
+cam2_9999190306072100773.tif,0.6845064163208008,True,False,False,False
+cam2_9999190306082425042.tif,0.6908676624298096,True,False,False,False
+cam2_9999190306083113234.tif,0.6888766288757324,True,False,False,False
+cam2_9999190306093439491.tif,0.6835606098175049,True,False,False,False
+cam2_9999190314080346939.tif,0.6578483581542969,True,False,False,False
+cam2_9999190314080515983.tif,0.6652727127075195,True,False,False,False
+cam2_9999190314081532124.tif,0.660717248916626,True,False,True,False
+cam2_9999190314082306333.tif,0.6608343124389648,True,False,False,False
+cam2_9999190320143654651.tif,0.6589529514312744,True,False,False,False
+cam3_0013190123054854104.tif,0.6908855438232422,True,False,False,False
+cam3_0013190204210518304.tif,0.7098770141601562,True,True,True,False
+cam3_0013190205023134203.tif,0.6647899150848389,True,False,True,False
+cam3_0013190205145202102.tif,0.669975757598877,True,True,False,False
+cam3_0013190207080740302.tif,0.6761386394500732,True,False,False,False
+cam3_0013190207204804301.tif,0.6629483699798584,True,False,False,False
+cam3_0013190208221036303.tif,0.6730124950408936,True,False,False,False
+cam3_0013190211005200204.tif,0.6837525367736816,True,True,False,False
+cam3_0013190211015158102.tif,0.7186155319213867,True,True,False,False
+cam3_0013190211225418202.tif,0.6616606712341309,True,True,False,False
+cam3_0013190212070102102.tif,0.6947288513183594,True,True,True,True
+cam3_0013190213183654104.tif,0.6815042495727539,True,False,False,False
+cam3_0013190214075048204.tif,0.671334981918335,True,False,False,False
+cam3_0013190214150106203.tif,0.6829743385314941,True,False,False,False
+cam3_0013190215043130202.tif,0.6737918853759766,True,True,False,False
+cam3_0013190215081952301.tif,0.6633353233337402,True,False,False,False
+cam3_0013190215145056103.tif,0.6786899566650391,True,False,True,False
+cam3_0013190215145110301.tif,0.6827175617218018,True,False,False,False
+cam3_0013190215204336203.tif,0.6718485355377197,True,False,True,False
+cam3_0013190215204346303.tif,0.6838188171386719,True,False,False,False
+cam3_0013190215213516301.tif,0.6886417865753174,True,False,False,False
+cam3_0013190217080548101.tif,0.6786708831787109,True,True,False,False
+cam3_0013190217123716104.tif,0.6737048625946045,True,False,True,False
+cam3_0013190217211330102.tif,0.6838910579681396,True,False,False,False
+cam3_0013190218093610302.tif,0.6738412380218506,True,False,False,False
+cam3_0013190219022716102.tif,0.6766927242279053,True,False,False,False
+cam3_0013190219034608101.tif,0.6747622489929199,True,False,False,False
+cam3_0013190219043002103.tif,0.6662118434906006,True,False,False,False
+cam3_0013190221000030304.tif,0.7024176120758057,True,True,False,False
+cam3_0013190221000720201.tif,0.6869122982025146,True,True,False,False
+cam3_0013190221080244102.tif,0.6832096576690674,True,False,False,True
+cam3_0013190222105832201.tif,0.6761434078216553,True,True,False,False
+cam3_0013190222123456202.tif,0.679304838180542,True,False,True,False
+cam3_0013190223205002302.tif,0.6876883506774902,True,False,False,False
+cam3_0013190226142534204.tif,0.6697585582733154,True,False,False,False
+cam3_0013190227214848204.tif,0.6667184829711914,True,True,False,False
+cam3_0013190304200934302.tif,0.6900177001953125,True,False,True,False
+cam3_0013190304222324304.tif,0.6847302913665771,True,False,False,False
+cam3_0013190305011508104.tif,0.6934530735015869,True,False,True,False
+cam3_0013190305013602302.tif,0.6817605495452881,True,False,True,False
+cam3_0013190307031230303.tif,0.6934926509857178,True,False,False,True
+cam3_0013190309040808202.tif,0.6871228218078613,True,False,False,False
+cam3_0013190310114940102.tif,0.7063655853271484,True,False,False,False
+cam3_0013190313061234101.tif,0.6857635974884033,True,True,False,True
+cam3_0013190313061246201.tif,0.6748085021972656,True,True,False,True
+cam3_0013190314055322303.tif,0.6942999362945557,True,False,False,False
+cam3_0013190314101758202.tif,0.6685619354248047,True,False,False,False
+cam3_0013190314193938304.tif,0.6868007183074951,True,False,False,False
+cam3_0013190318075150204.tif,0.7097322940826416,True,True,False,False
+cam3_0013190318103048304.tif,0.6814868450164795,True,False,True,False
+cam3_0013190318114732102.tif,0.7014811038970947,True,True,False,False
+cam3_0013190319205316101.tif,0.6828014850616455,True,False,False,False
+cam3_0013190320181012304.tif,0.7047412395477295,True,True,False,False
+cam3_0013190321091306203.tif,0.688312292098999,True,False,False,False
+cam3_0013190322093912101.tif,0.6939907073974609,True,False,True,False
+cam3_0013190323160702301.tif,0.6805427074432373,True,True,False,False
+cam3_0013190323160712101.tif,0.7058110237121582,True,True,False,False
+cam3_0013190323174724204.tif,0.699549674987793,True,True,False,False
+cam3_0013190324084302201.tif,0.679457426071167,True,True,True,False
+cam3_0013190324184540304.tif,0.6789145469665527,True,False,False,False
+cam3_0013190326015622103.tif,0.6809699535369873,True,True,True,False
+cam3_0013190329021724202.tif,0.6838150024414062,True,False,False,False
+cam3_0013190329135030203.tif,0.7014329433441162,True,False,False,True
+cam3_0013190330072636103.tif,0.6911182403564453,True,False,False,False
+cam3_0013190330091256204.tif,0.6857559680938721,True,True,False,False
+cam3_0013190330091336304.tif,0.6945202350616455,True,False,True,False
+cam3_0013190330091428204.tif,0.7004477977752686,True,True,False,False
+cam3_0013190330091450104.tif,0.6906967163085938,True,False,False,False
+cam3_0013190330220812104.tif,0.6848545074462891,True,False,False,False
+cam3_0013190402033834203.tif,0.6858608722686768,True,False,False,False
+cam3_0013190402153426302.tif,0.6883323192596436,True,True,True,False
+cam3_0013190402172840302.tif,0.7005805969238281,True,False,False,False
+cam3_0013190402181050104.tif,0.6811492443084717,True,False,False,False
+cam3_0013190402213334302.tif,0.7141819000244141,True,False,False,False
+cam3_0013190402223224304.tif,0.6758310794830322,True,False,True,False
+cam3_0013190403063340302.tif,0.6851177215576172,True,True,True,False
+cam3_0013190403070032101.tif,0.6893916130065918,True,True,False,False
+cam3_0013190403070108102.tif,0.6805434226989746,True,True,False,False
+cam3_0016190212070119203.tif,0.6675593852996826,True,True,True,True
+cam3_0016190221030731302.tif,0.6743135452270508,True,True,False,False
+cam3_0016190305142248202.tif,0.6753354072570801,True,False,False,False
+cam3_0016190305212739302.tif,0.690943717956543,True,False,False,False
+cam3_0016190307182953101.tif,0.6936917304992676,True,False,False,False
+cam3_0016190311150133103.tif,0.6807310581207275,True,False,True,False
+cam3_0016190318141322301.tif,0.6662044525146484,True,False,True,False
+cam3_0016190322051314103.tif,0.6839096546173096,True,False,False,False
+cam3_9999190306015039064.tif,0.678009033203125,True,False,False,False
+cam3_9999190314075220726.tif,0.6849842071533203,True,False,False,False
+cam3_9999190314080410948.tif,0.6739282608032227,True,False,False,False
+cam3_9999190314081724161.tif,0.6768114566802979,True,False,False,False
+cam3_9999190314081819190.tif,0.6649365425109863,True,False,False,False
+cam3_9999190314082426370.tif,0.6686098575592041,True,False,False,False
+cam3_9999190314083402595.tif,0.6830689907073975,True,True,False,False
+cam3_9999190314085711035.tif,0.6784262657165527,True,False,False,False
+cam3_9999190314090827285.tif,0.6797726154327393,True,False,False,False
+cam3_9999190314095404600.tif,0.6663820743560791,True,False,False,False
+cam3_9999190314095528644.tif,0.6691668033599854,True,False,False,False
+cam3_9999190314095603661.tif,0.6737360954284668,True,False,False,False
+cam3_9999190314095634678.tif,0.6620268821716309,True,False,False,False
+cam3_9999190314095650686.tif,0.6817605495452881,True,False,False,False
+cam3_9999190314101055048.tif,0.7037427425384521,True,False,False,False
+cam3_9999190314101450129.tif,0.6779818534851074,True,False,False,False
+cam3_9999190314101640177.tif,0.6776747703552246,True,True,False,False
+cam3_9999190314101716193.tif,0.6727466583251953,True,False,False,False
+cam3_9999190314101913245.tif,0.6844186782836914,True,False,False,False
+cam3_9999190314103709661.tif,0.69073486328125,True,False,False,False
+cam3_9999190314104208806.tif,0.684394359588623,True,False,False,False
+cam3_9999190314104311834.tif,0.6729087829589844,True,False,False,False
+cam3_9999190314110318352.tif,0.6818222999572754,True,True,False,False
+cam3_9999190314111207512.tif,0.674980878829956,True,False,False,False
+cam3_9999190314111732598.tif,0.7134203910827637,True,False,False,False
+cam3_9999190314112135630.tif,0.6857616901397705,True,False,False,False
+cam3_9999190314112911682.tif,0.6791477203369141,True,False,False,False
+cam3_9999190314113213775.tif,0.6857612133026123,True,False,False,False
+cam3_9999190314122519848.tif,0.6775460243225098,True,False,False,False
+cam3_9999190314122800917.tif,0.6775009632110596,True,False,False,False
+cam3_9999190320053841054.tif,0.6778066158294678,True,False,False,False
+cam3_9999190320054004094.tif,0.6915409564971924,True,False,False,False
+cam3_9999190320060154142.tif,0.7105960845947266,True,False,False,False
+cam3_9999190320060342191.tif,0.7136542797088623,True,False,False,False
+cam3_9999190320061105371.tif,0.6810109615325928,True,False,False,False
+cam3_9999190320061159395.tif,0.6975610256195068,True,False,False,False
+cam3_9999190320061629512.tif,0.6919927597045898,True,False,False,False
+cam3_9999190320062144653.tif,0.6771533489227295,True,False,False,False
+cam3_9999190320062238677.tif,0.6794373989105225,True,False,False,False
+cam3_9999190320063513975.tif,0.6794803142547607,True,False,False,False
+cam3_9999190320070853657.tif,0.6863386631011963,True,False,False,False
+cam3_9999190320071958907.tif,0.6876418590545654,True,False,False,False
+cam3_9999190320072135952.tif,0.6810529232025146,True,True,False,False
+cam3_9999190320073426206.tif,0.6776726245880127,True,False,False,False
+cam3_9999190320090411843.tif,0.6716275215148926,True,False,False,False
+cam3_9999190320094804677.tif,0.6814877986907959,True,False,False,False
+cam3_9999190320095252794.tif,0.6924629211425781,True,False,False,False
+cam3_9999190320100718970.tif,0.685455322265625,True,False,False,False
+cam3_9999190320101052986.tif,0.6775429248809814,True,False,False,False
+cam3_9999190320101920027.tif,0.6993677616119385,True,False,False,False
+cam3_9999190320105015350.tif,0.6725928783416748,True,False,False,False
+cam3_9999190320105302400.tif,0.6715459823608398,True,False,False,False
+cam3_9999190320111123709.tif,0.676903486251831,True,False,False,False
+cam3_9999190320112116803.tif,0.6728153228759766,True,True,False,False
+cam3_9999190320113902282.tif,0.6882107257843018,True,False,False,False
+cam3_9999190320114943535.tif,0.6772775650024414,True,False,False,False
+cam3_9999190320122110146.tif,0.6782326698303223,True,False,False,False
+cam3_9999190320123103396.tif,0.6733417510986328,True,False,False,False
+cam3_9999190320123447416.tif,0.6782317161560059,True,False,False,False
+cam3_9999190320123547428.tif,0.6760365962982178,True,False,False,False
+cam3_9999190320124236589.tif,0.6935904026031494,True,False,False,False
+cam3_9999190320131502226.tif,0.665905237197876,True,False,False,False
+cam3_9999190320131951295.tif,0.7046732902526855,True,False,False,False
+cam3_9999190320133102556.tif,0.6750445365905762,True,False,False,False
+cam3_9999190320141151010.tif,0.682689905166626,True,False,False,False
+cam3_9999190320142432332.tif,0.6775064468383789,True,False,False,False
+cam3_9999190320142942464.tif,0.6884326934814453,True,False,False,False
+cam3_9999190320145253028.tif,0.6836702823638916,True,False,False,False
+cam3_9999190320150814371.tif,0.6712632179260254,True,True,False,False
+cam3_9999190320160222665.tif,0.6808624267578125,True,False,False,False
+cam3_9999190320161614916.tif,0.6777169704437256,True,False,False,False
+cam3_9999190320162900178.tif,0.6861584186553955,True,False,False,False
+cam3_9999190320163358310.tif,0.6665003299713135,True,False,False,False
+cam3_9999190320170511079.tif,0.6798982620239258,True,False,False,False
+cam3_9999190320171048202.tif,0.6896889209747314,True,False,False,False
+cam3_9999190320171256223.tif,0.6796000003814697,True,False,False,False
+cam3_9999190320172607436.tif,0.6745448112487793,True,False,False,False
+cam3_9999190320172805488.tif,0.6729257106781006,True,False,False,False
+cam3_9999190328141846075.tif,0.6719300746917725,True,False,False,False
+cam4_0013190122064250102.tif,0.6899950504302979,True,True,False,False
+cam4_0013190122064256104.tif,0.6733486652374268,True,True,False,False
+cam4_0013190122065024101.tif,0.6673080921173096,True,True,False,False
+cam4_0013190122072056304.tif,0.6674196720123291,True,True,False,False
+cam4_0013190122084250303.tif,0.6741230487823486,True,False,False,False
+cam4_0013190122091532304.tif,0.6571617126464844,True,True,False,False
+cam4_0013190122093724301.tif,0.6621911525726318,True,False,False,False
+cam4_0013190122094214103.tif,0.6611378192901611,True,True,False,False
+cam4_0013190122094856104.tif,0.6555089950561523,True,True,False,False
+cam4_0013190122094922102.tif,0.6707563400268555,True,True,False,False
+cam4_0013190122193054102.tif,0.6620309352874756,True,True,False,False
+cam4_0013190122193940102.tif,0.6452531814575195,True,True,False,False
+cam4_0013190122194454104.tif,0.6599116325378418,True,True,False,False
+cam4_0013190122194728201.tif,0.6674365997314453,True,True,False,False
+cam4_0013190122195844103.tif,0.6743965148925781,True,False,False,False
+cam4_0013190122203058101.tif,0.656517744064331,True,True,False,False
+cam4_0013190122203532303.tif,0.665149450302124,True,True,False,False
+cam4_0013190122203650201.tif,0.6536781787872314,True,True,False,False
+cam4_0013190122210646302.tif,0.6644277572631836,True,False,False,False
+cam4_0013190123044322301.tif,0.6661946773529053,True,False,False,False
+cam4_0013190123094040101.tif,0.6673369407653809,True,True,False,False
+cam4_0013190123094508301.tif,0.661858081817627,True,True,False,False
+cam4_0013190123094532202.tif,0.6507601737976074,True,True,False,False
+cam4_0013190123100138302.tif,0.655167818069458,True,True,False,False
+cam4_0013190123101306102.tif,0.6750450134277344,True,True,True,False
+cam4_0013190124210616101.tif,0.6760172843933105,True,True,False,False
+cam4_0013190125000602304.tif,0.6617505550384521,True,True,False,False
+cam4_0013190202184720102.tif,0.6686646938323975,True,False,True,False
+cam4_0013190202185948203.tif,0.6610286235809326,True,True,True,False
+cam4_0013190202224206304.tif,0.657067060470581,True,False,False,False
+cam4_0013190203071756204.tif,0.670245885848999,True,True,False,False
+cam4_0013190203071858204.tif,0.6606454849243164,True,True,True,False
+cam4_0013190203153802304.tif,0.6661529541015625,True,True,False,False
+cam4_0013190203154126204.tif,0.6592204570770264,True,True,True,False
+cam4_0013190203205612203.tif,0.6716761589050293,True,False,True,False
+cam4_0013190204084640301.tif,0.6579618453979492,True,True,True,False
+cam4_0013190204084810301.tif,0.6808512210845947,True,True,True,False
+cam4_0013190204094450103.tif,0.6774508953094482,True,True,True,False
+cam4_0013190204094712303.tif,0.6733739376068115,True,True,True,False
+cam4_0013190204115536202.tif,0.6580855846405029,True,True,True,False
+cam4_0013190204115830103.tif,0.6691277027130127,True,True,True,False
+cam4_0013190204120500101.tif,0.6599059104919434,True,True,True,False
+cam4_0013190204120844201.tif,0.6590943336486816,True,True,True,False
+cam4_0013190204120924301.tif,0.6642959117889404,True,True,True,False
+cam4_0013190204121046201.tif,0.6730771064758301,True,True,True,False
+cam4_0013190204121216201.tif,0.6623842716217041,True,True,True,False
+cam4_0013190204121432302.tif,0.705174446105957,True,True,True,False
+cam4_0013190204122018102.tif,0.6739413738250732,True,True,True,False
+cam4_0013190204122928104.tif,0.6758511066436768,True,True,True,False
+cam4_0013190204162400201.tif,0.6798553466796875,True,True,True,False
+cam4_0013190204181342304.tif,0.6774647235870361,True,True,True,False
+cam4_0013190204185822303.tif,0.6759233474731445,True,True,False,False
+cam4_0013190204203252104.tif,0.6837210655212402,True,True,False,False
+cam4_0013190205043952102.tif,0.6763796806335449,True,False,True,False
+cam4_0013190205052544203.tif,0.6791694164276123,True,False,False,False
+cam4_0013190205053200303.tif,0.6729400157928467,True,False,False,False
+cam4_0013190205061512303.tif,0.6919355392456055,True,False,True,False
+cam4_0013190207070450102.tif,0.6739521026611328,True,False,True,False
+cam4_0013190207071620203.tif,0.6831645965576172,True,False,True,False
+cam4_0013190207073018301.tif,0.6795804500579834,True,False,True,False
+cam4_0013190207104130203.tif,0.6784336566925049,True,True,True,False
+cam4_0013190207124116103.tif,0.6830971240997314,True,False,True,False
+cam4_0013190207130418101.tif,0.6790101528167725,True,False,True,False
+cam4_0013190207133240201.tif,0.6909310817718506,True,False,False,False
+cam4_0013190207140156201.tif,0.6779212951660156,True,False,True,False
+cam4_0013190207154442304.tif,0.6714162826538086,True,False,True,False
+cam4_0013190211004252304.tif,0.6696810722351074,True,True,False,False
+cam4_0013190211011326201.tif,0.6874499320983887,True,True,True,False
+cam4_0013190211021916103.tif,0.6703531742095947,True,True,False,False
+cam4_0013190211185508301.tif,0.6726655960083008,True,True,False,False
+cam4_0013190211191426204.tif,0.6716883182525635,True,True,False,False
+cam4_0013190211192516303.tif,0.6710216999053955,True,True,False,False
+cam4_0013190211192536203.tif,0.6757640838623047,True,True,False,False
+cam4_0013190211192716302.tif,0.6898045539855957,True,True,False,False
+cam4_0013190212134124301.tif,0.6791174411773682,True,True,True,False
+cam4_0013190213001654302.tif,0.6714620590209961,True,True,True,False
+cam4_0013190213075054301.tif,0.6773586273193359,True,True,True,False
+cam4_0013190213123218202.tif,0.6898937225341797,True,False,True,False
+cam4_0013190213165224204.tif,0.6709387302398682,True,False,True,False
+cam4_0013190213190352204.tif,0.6975517272949219,True,True,False,False
+cam4_0013190213210040102.tif,0.6864035129547119,True,False,False,False
+cam4_0013190213210136101.tif,0.6765494346618652,True,True,False,False
+cam4_0013190213210716103.tif,0.6914584636688232,True,False,False,False
+cam4_0013190213213202303.tif,0.6826930046081543,True,False,False,False
+cam4_0013190213213750201.tif,0.6833977699279785,True,True,False,False
+cam4_0013190213214012101.tif,0.6854231357574463,True,False,False,False
+cam4_0013190213214440303.tif,0.6724109649658203,True,False,False,False
+cam4_0013190213222936301.tif,0.693110466003418,True,True,False,False
+cam4_0013190213225912304.tif,0.6857953071594238,True,True,False,False
+cam4_0013190213225952104.tif,0.6734366416931152,True,True,True,False
+cam4_0013190213230758104.tif,0.6817588806152344,True,True,False,False
+cam4_0013190213230910204.tif,0.6840043067932129,True,True,False,False
+cam4_0013190213231030104.tif,0.6593759059906006,True,True,True,False
+cam4_0013190213231706201.tif,0.675957441329956,True,True,True,False
+cam4_0013190213231738201.tif,0.6725304126739502,True,True,True,False
+cam4_0013190213232308103.tif,0.673182487487793,True,True,False,False
+cam4_0013190214034250103.tif,0.679368257522583,True,False,True,False
+cam4_0013190214061254104.tif,0.6873898506164551,True,True,False,False
+cam4_0013190214061418101.tif,0.6702854633331299,True,True,False,False
+cam4_0013190214061448101.tif,0.6876132488250732,True,True,False,False
+cam4_0013190214065144303.tif,0.6798121929168701,True,False,False,False
+cam4_0013190214070646203.tif,0.6850552558898926,True,False,True,False
+cam4_0013190214071058303.tif,0.6890778541564941,True,False,True,False
+cam4_0013190214071450203.tif,0.6842434406280518,True,False,True,False
+cam4_0013190214071642103.tif,0.6740646362304688,True,False,True,False
+cam4_0013190214071752203.tif,0.6801555156707764,True,False,True,False
+cam4_0013190214072218104.tif,0.6789052486419678,True,False,True,False
+cam4_0013190214072522104.tif,0.6766760349273682,True,False,True,False
+cam4_0013190214072552104.tif,0.69364333152771,True,False,True,False
+cam4_0013190214073226104.tif,0.6763112545013428,True,False,True,False
+cam4_0013190214073256104.tif,0.6729412078857422,True,False,True,False
+cam4_0013190214074254101.tif,0.6806693077087402,True,False,True,False
+cam4_0013190214074748301.tif,0.6779065132141113,True,False,True,False
+cam4_0013190214075010201.tif,0.6747114658355713,True,False,True,False
+cam4_0013190214075050301.tif,0.6784377098083496,True,False,False,False
+cam4_0013190214075210201.tif,0.6838874816894531,True,False,True,False
+cam4_0013190214075916201.tif,0.6921021938323975,True,False,True,False
+cam4_0013190214080832301.tif,0.6869359016418457,True,False,True,False
+cam4_0013190214080912101.tif,0.6773762702941895,True,False,True,False
+cam4_0013190214081440302.tif,0.6815807819366455,True,False,True,False
+cam4_0013190214082822303.tif,0.7057983875274658,True,False,False,False
+cam4_0013190214083642201.tif,0.6734449863433838,True,False,False,False
+cam4_0013190214083744201.tif,0.690192461013794,True,False,True,False
+cam4_0013190214084306101.tif,0.6835293769836426,True,False,True,False
+cam4_0013190214084750201.tif,0.6809248924255371,True,False,True,False
+cam4_0013190214084912101.tif,0.6799893379211426,True,False,False,False
+cam4_0013190214085952102.tif,0.6729092597961426,True,False,True,False
+cam4_0013190214090908202.tif,0.6830308437347412,True,False,True,False
+cam4_0013190214091122303.tif,0.6882987022399902,True,False,False,False
+cam4_0013190214091452302.tif,0.6898736953735352,True,False,True,False
+cam4_0013190214093356202.tif,0.6841402053833008,True,False,False,False
+cam4_0013190214093902204.tif,0.6937892436981201,True,False,True,False
+cam4_0013190214095338202.tif,0.6687023639678955,True,False,False,False
+cam4_0013190214100942103.tif,0.6707553863525391,True,False,False,False
+cam4_0013190214102554104.tif,0.6673991680145264,True,False,True,False
+cam4_0013190214102828201.tif,0.6678078174591064,True,False,True,False
+cam4_0013190214103000201.tif,0.6825845241546631,True,False,True,False
+cam4_0013190214104308104.tif,0.6816494464874268,True,False,True,False
+cam4_0013190214104348204.tif,0.6747012138366699,True,False,True,False
+cam4_0013190214105730301.tif,0.6664738655090332,True,False,True,False
+cam4_0013190214111514101.tif,0.6781299114227295,True,False,False,False
+cam4_0013190214112348304.tif,0.6689367294311523,True,False,False,False
+cam4_0013190214112552101.tif,0.6748673915863037,True,False,True,False
+cam4_0013190214112924101.tif,0.6658279895782471,True,False,True,False
+cam4_0013190214114904301.tif,0.6764297485351562,True,False,True,False
+cam4_0013190214124422201.tif,0.6685762405395508,True,False,True,False
+cam4_0013190214212808201.tif,0.6735553741455078,True,False,True,False
+cam4_0013190215091230302.tif,0.6716969013214111,True,True,True,False
+cam4_0013190215224604202.tif,0.673098087310791,True,False,False,False
+cam4_0013190216045422101.tif,0.6642239093780518,True,False,True,False
+cam4_0013190216130930202.tif,0.6822144985198975,True,True,True,False
+cam4_0013190217053632104.tif,0.6643552780151367,True,False,True,False
+cam4_0013190217072108101.tif,0.676119327545166,True,True,False,False
+cam4_0013190217080034301.tif,0.6651589870452881,True,True,True,False
+cam4_0013190217080310302.tif,0.6689367294311523,True,True,True,False
+cam4_0013190217081002104.tif,0.6662890911102295,True,True,False,False
+cam4_0013190217161536301.tif,0.6683149337768555,True,True,False,False
+cam4_0013190217161606301.tif,0.6709117889404297,True,True,False,False
+cam4_0013190217165002203.tif,0.6857578754425049,True,True,True,False
+cam4_0013190217234626101.tif,0.6624879837036133,True,False,True,False
+cam4_0013190219151400203.tif,0.6753900051116943,True,False,False,False
+cam4_0013190219153448202.tif,0.6720938682556152,True,False,False,False
+cam4_0013190219153458302.tif,0.6565976142883301,True,False,False,False
+cam4_0013190219153528302.tif,0.6625654697418213,True,False,False,False
+cam4_0013190219153538102.tif,0.6715543270111084,True,False,True,False
+cam4_0013190219153734303.tif,0.6735475063323975,True,False,False,False
+cam4_0013190219153804303.tif,0.6665709018707275,True,False,False,False
+cam4_0013190220022836303.tif,0.6692914962768555,True,False,True,False
+cam4_0013190220050330201.tif,0.6602985858917236,True,False,False,False
+cam4_0013190220122118201.tif,0.6762683391571045,True,False,True,False
+cam4_0013190220153556304.tif,0.7395884990692139,True,True,False,False
+cam4_0013190220154000304.tif,0.704338550567627,True,True,False,False
+cam4_0013190220154234304.tif,0.6999523639678955,True,True,False,False
+cam4_0013190220155954304.tif,0.6725385189056396,True,True,False,False
+cam4_0013190220160358304.tif,0.6716170310974121,True,True,False,False
+cam4_0013190220161448104.tif,0.6769857406616211,True,True,False,False
+cam4_0013190223133336204.tif,0.673790693283081,True,False,True,False
+cam4_0013190225150824204.tif,0.7020149230957031,True,True,True,False
+cam4_0013190226030110104.tif,0.6544945240020752,True,False,True,False
+cam4_0013190226075252104.tif,0.6639447212219238,True,False,False,False
+cam4_0013190226081150301.tif,0.6591577529907227,True,False,False,False
+cam4_0013190226082602302.tif,0.6800205707550049,True,False,False,False
+cam4_0013190227065322102.tif,0.6828505992889404,True,False,False,False
+cam4_0013190227194050304.tif,0.6985225677490234,True,False,False,False
+cam4_0013190302170544304.tif,0.6654882431030273,True,True,True,False
+cam4_0013190303071026102.tif,0.6611795425415039,True,False,False,False
+cam4_0013190303104536104.tif,0.6662330627441406,True,False,False,False
+cam4_0013190303144920104.tif,0.6861937046051025,True,True,False,False
+cam4_0013190303145024104.tif,0.6634867191314697,True,True,True,False
+cam4_0013190303145034204.tif,0.6674847602844238,True,True,False,False
+cam4_0013190303145046304.tif,0.6733818054199219,True,True,False,False
+cam4_0013190303145056104.tif,0.6571800708770752,True,True,False,False
+cam4_0013190303145106204.tif,0.7018847465515137,True,True,True,False
+cam4_0013190303145200104.tif,0.6829159259796143,True,True,True,False
+cam4_0013190303145442201.tif,0.6694252490997314,True,True,True,False
+cam4_0013190303161036303.tif,0.6635322570800781,True,True,False,False
+cam4_0013190303164214104.tif,0.6612348556518555,True,True,True,False
+cam4_0013190303170206104.tif,0.6733691692352295,True,True,True,False
+cam4_0013190303170322204.tif,0.6594655513763428,True,True,False,False
+cam4_0013190304030714302.tif,0.6656301021575928,True,False,False,False
+cam4_0013190304071252104.tif,0.6790058612823486,True,False,False,False
+cam4_0013190304084328304.tif,0.6622195243835449,True,False,False,False
+cam4_0013190304131230304.tif,0.6969239711761475,True,False,False,False
+cam4_0013190304153826304.tif,0.6886601448059082,True,True,False,False
+cam4_0013190304165744104.tif,0.6752519607543945,True,True,False,False
+cam4_0013190304222616201.tif,0.6665334701538086,True,False,True,False
+cam4_0013190305060002204.tif,0.6583981513977051,True,False,False,False
+cam4_0013190305180948304.tif,0.6668918132781982,True,False,True,False
+cam4_0013190306101208304.tif,0.6619937419891357,True,False,False,False
+cam4_0013190307035310304.tif,0.7551147937774658,True,False,True,False
+cam4_0013190307080106302.tif,0.6642665863037109,True,True,True,False
+cam4_0013190307081624202.tif,0.6481070518493652,True,True,False,True
+cam4_0013190308041708303.tif,0.6731829643249512,True,False,False,False
+cam4_0013190308124858104.tif,0.6696734428405762,True,True,False,False
+cam4_0013190309025848202.tif,0.6720705032348633,True,False,False,False
+cam4_0013190309034638203.tif,0.6694304943084717,True,True,False,False
+cam4_0013190312064202203.tif,0.7164008617401123,True,False,True,True
+cam4_0013190312122104103.tif,0.6843395233154297,True,False,True,False
+cam4_0013190312174024203.tif,0.6813955307006836,True,True,False,False
+cam4_0013190313230518301.tif,0.6913249492645264,True,True,True,False
+cam4_0013190314232426303.tif,0.6671297550201416,True,True,False,False
+cam4_0013190317161204302.tif,0.6911721229553223,True,True,False,False
+cam4_0013190317220604204.tif,0.684816837310791,True,False,False,False
+cam4_0013190318094756103.tif,0.6778566837310791,True,True,False,False
+cam4_0013190319065516101.tif,0.6784687042236328,True,True,False,False
+cam4_0013190319065610301.tif,0.6811666488647461,True,True,False,False
+cam4_0013190319183658301.tif,0.6794376373291016,True,True,True,False
+cam4_0013190321154016102.tif,0.6730537414550781,True,True,False,False
+cam4_0013190321161700102.tif,0.6773660182952881,True,True,False,False
+cam4_0013190321164406202.tif,0.6723909378051758,True,True,False,False
+cam4_0013190321165338204.tif,0.6906678676605225,True,True,False,False
+cam4_0013190322150920101.tif,0.6755423545837402,True,True,True,False
+cam4_0013190322151232101.tif,0.6834211349487305,True,True,False,False
+cam4_0013190322160708301.tif,0.6756548881530762,True,True,False,False
+cam4_0013190322161018301.tif,0.6745328903198242,True,True,False,False
+cam4_0013190322163808203.tif,0.6841311454772949,True,True,False,False
+cam4_0013190323145900302.tif,0.6934695243835449,True,True,False,True
+cam4_0013190324180442204.tif,0.6736421585083008,True,True,True,False
+cam4_0013190324183044301.tif,0.6780078411102295,True,True,True,False
+cam4_0013190324190138303.tif,0.6815140247344971,True,False,False,False
+cam4_0013190324210634303.tif,0.7000346183776855,True,False,False,True
+cam4_0013190324225850103.tif,0.6954653263092041,True,True,False,False
+cam4_0013190324232622303.tif,0.6738152503967285,True,True,False,False
+cam4_0013190326230524101.tif,0.671459436416626,True,True,False,False
+cam4_0013190326231136302.tif,0.6575496196746826,True,True,False,False
+cam4_0013190326231148103.tif,0.6788802146911621,True,True,False,False
+cam4_0013190326231158203.tif,0.6885933876037598,True,True,False,False
+cam4_0013190326231634201.tif,0.6788206100463867,True,True,False,False
+cam4_0013190327004850203.tif,0.6619827747344971,True,True,False,False
+cam4_0013190329045146201.tif,0.6669468879699707,True,False,True,False
+cam4_0013190329121220304.tif,0.6704216003417969,True,False,False,False
+cam4_0013190329135924204.tif,0.6671314239501953,True,False,False,False
+cam4_0013190329145452301.tif,0.6617980003356934,True,True,False,False
+cam4_0013190329150330201.tif,0.6692132949829102,True,True,False,True
+cam4_0013190329150350101.tif,0.6704144477844238,True,True,False,False
+cam4_0013190329150412301.tif,0.6714580059051514,True,False,False,False
+cam4_0013190329164904104.tif,0.675316333770752,True,True,True,False
+cam4_0013190330043132102.tif,0.6765244007110596,True,False,False,False
+cam4_0013190330060340101.tif,0.6816225051879883,True,False,False,False
+cam4_0013190330071428303.tif,0.6757726669311523,True,False,False,False
+cam4_0013190330073244101.tif,0.6746764183044434,True,False,False,False
+cam4_0013190330074602202.tif,0.6720895767211914,True,False,False,False
+cam4_0013190330075124302.tif,0.6886169910430908,True,False,False,False
+cam4_0013190330084104101.tif,0.6713061332702637,True,True,False,False
+cam4_0013190330091442101.tif,0.680574893951416,True,True,False,False
+cam4_0013190330094838102.tif,0.6896867752075195,True,False,False,False
+cam4_0013190330102534202.tif,0.6719236373901367,True,False,False,False
+cam4_0013190330105942303.tif,0.6773967742919922,True,False,False,False
+cam4_0013190330110106203.tif,0.6792318820953369,True,False,False,False
+cam4_0013190330114138301.tif,0.6774816513061523,True,False,True,False
+cam4_0013190330114652301.tif,0.6747550964355469,True,False,False,False
+cam4_0013190330190038204.tif,0.6817934513092041,True,True,True,False
+cam4_0013190331012504103.tif,0.6802029609680176,True,True,False,False
+cam4_0013190331064242302.tif,0.6817734241485596,True,True,False,False
+cam4_0013190331175700103.tif,0.6784062385559082,True,True,False,False
+cam4_0013190331215622104.tif,0.680168867111206,True,True,True,False
+cam4_0013190401052454204.tif,0.6782820224761963,True,False,False,True
+cam4_0013190401082316103.tif,0.6675636768341064,True,True,False,False
+cam4_0013190401121726104.tif,0.6905496120452881,True,True,False,False
+cam4_0013190401162738104.tif,0.6938300132751465,True,False,False,False
+cam4_0013190402080946304.tif,0.6782855987548828,True,True,False,False
+cam4_0013190402101216303.tif,0.6718673706054688,True,True,False,False
+cam4_0013190403063144102.tif,0.6864852905273438,True,True,False,False
+cam4_0013190403063206302.tif,0.6764824390411377,True,True,False,False
+cam4_0013190403063312303.tif,0.6739366054534912,True,True,False,False
+cam4_0013190403064816303.tif,0.6770544052124023,True,True,True,False
+cam4_0013190403070026302.tif,0.6808748245239258,True,True,True,False
+cam4_0013190403070142103.tif,0.6810531616210938,True,True,False,False
+cam4_0016190202092838304.tif,0.701500415802002,True,False,False,True
+cam4_0016190203090730201.tif,0.6759836673736572,True,True,False,True
+cam4_0016190206024732304.tif,0.6987850666046143,True,False,False,True
+cam4_0016190215212656304.tif,0.6798629760742188,True,False,False,False
+cam4_0016190218114941204.tif,0.6903250217437744,True,False,False,False
+cam4_0016190220030705302.tif,0.6766409873962402,True,True,False,True
+cam4_0016190226002327202.tif,0.6852498054504395,True,True,False,False
+cam4_0016190228113424104.tif,0.6948041915893555,True,False,False,True
+cam4_0016190305161818304.tif,0.6810879707336426,True,False,False,True
+cam4_0016190307123942103.tif,0.6916284561157227,True,True,False,False
+cam4_0016190307124504303.tif,0.6825149059295654,True,False,False,False
+cam4_0016190307130207304.tif,0.6772892475128174,True,False,False,False
+cam4_0016190307131917102.tif,0.6726322174072266,True,False,False,False
+cam4_0016190307132517102.tif,0.6804039478302002,True,False,False,False
+cam4_0016190307133042302.tif,0.6821780204772949,True,False,False,False
+cam4_0016190307133602103.tif,0.6749227046966553,True,False,False,False
+cam4_0016190307133619303.tif,0.6820576190948486,True,False,False,False
+cam4_0016190307135903304.tif,0.6794857978820801,True,False,False,False
+cam4_0016190307140130104.tif,0.686669111251831,True,False,False,False
+cam4_0016190307142123104.tif,0.6737556457519531,True,True,False,False
+cam4_0016190307150126302.tif,0.6787288188934326,True,False,False,False
+cam4_0016190307151226204.tif,0.6708123683929443,True,False,False,False
+cam4_0016190307151510201.tif,0.6716012954711914,True,False,False,False
+cam4_0016190307153747104.tif,0.6800491809844971,True,True,False,False
+cam4_0016190307154534302.tif,0.6640348434448242,True,False,False,False
+cam4_0016190307170137204.tif,0.6682004928588867,True,False,False,False
+cam4_0016190307171633301.tif,0.6822795867919922,True,False,False,False
+cam4_0016190307171718202.tif,0.6888554096221924,True,True,False,False
+cam4_0016190307172623103.tif,0.6820802688598633,True,False,False,False
+cam4_0016190307181004203.tif,0.6869759559631348,True,False,False,False
+cam4_0016190307183142102.tif,0.6869292259216309,True,False,False,False
+cam4_0016190307183702204.tif,0.673729658126831,True,False,False,False
+cam4_0016190307191711201.tif,0.6869215965270996,True,False,False,False
+cam4_0016190307195219103.tif,0.6850214004516602,True,False,False,False
+cam4_0016190307195315103.tif,0.6800103187561035,True,False,False,False
+cam4_0016190307201049202.tif,0.6862986087799072,True,False,False,False
+cam4_0016190307202353302.tif,0.6848042011260986,True,False,False,False
+cam4_0016190307205358302.tif,0.6985433101654053,True,False,False,False
+cam4_0016190307211007302.tif,0.6791067123413086,True,False,False,False
+cam4_0016190307213401204.tif,0.6988091468811035,True,False,False,False
+cam4_0016190307213730101.tif,0.6799757480621338,True,False,False,False
+cam4_0016190307221450103.tif,0.6766180992126465,True,False,False,False
+cam4_0016190307223616301.tif,0.6808152198791504,True,False,False,False
+cam4_0016190307225455301.tif,0.6825642585754395,True,True,False,False
+cam4_0016190307230246101.tif,0.6884663105010986,True,True,False,False
+cam4_0016190307230529301.tif,0.6950943470001221,True,True,False,False
+cam4_0016190307232051303.tif,0.6817939281463623,True,True,False,False
+cam4_0016190307232137203.tif,0.6721723079681396,True,True,False,False
+cam4_0016190307235205301.tif,0.6798901557922363,True,True,False,False
+cam4_0016190308000354202.tif,0.6813933849334717,True,True,False,False
+cam4_0016190308000715203.tif,0.6785328388214111,True,False,False,False
+cam4_0016190315140240101.tif,0.6796257495880127,True,True,False,False
+cam4_0016190315141245303.tif,0.66239333152771,True,True,False,False
+cam4_0016190316045041301.tif,0.6807401180267334,True,True,False,False
+cam4_0016190316045622101.tif,0.6756680011749268,True,True,False,False
+cam4_0016190316045947201.tif,0.6925535202026367,True,True,False,False
+cam4_0016190318092656304.tif,0.6891622543334961,True,True,False,False
+cam4_0016190321051142203.tif,0.6730234622955322,True,False,False,False
+cam4_0016190324002143302.tif,0.6849608421325684,True,True,False,False
+cam4_0016190329090033202.tif,0.6817641258239746,True,True,False,False
+cam4_0016190329141511303.tif,0.6734457015991211,True,True,False,False
+cam4_0016190329142946303.tif,0.6838629245758057,True,True,False,True
+cam4_0016190330091229303.tif,0.6472406387329102,True,True,False,False
+cam4_0016190331064416104.tif,0.6658501625061035,True,True,False,False
+cam4_0016190402073255302.tif,0.6617887020111084,True,True,False,False
+cam4_9999190215085642364.tif,0.6538882255554199,True,True,False,False
+cam4_9999190306014323875.tif,0.6569650173187256,True,False,False,False
+cam4_9999190306014409896.tif,0.666309118270874,True,False,False,False
+cam4_9999190306014920033.tif,0.6547315120697021,True,True,False,False
+cam4_9999190306014931037.tif,0.659520149230957,True,False,False,False
+cam4_9999190306015039065.tif,0.7031898498535156,True,False,False,False
+cam4_9999190306015538182.tif,0.7118608951568604,True,True,False,False
+cam4_9999190306020202331.tif,0.6928977966308594,True,False,False,False
+cam4_9999190306020622430.tif,0.6656863689422607,True,False,False,False
+cam4_9999190306021630530.tif,0.6672899723052979,True,False,False,False
+cam4_9999190306021702546.tif,0.667701005935669,True,False,False,False
+cam4_9999190306022459767.tif,0.6676328182220459,True,False,False,False
+cam4_9999190306023547022.tif,0.6719112396240234,True,False,False,False
+cam4_9999190306023802074.tif,0.661597728729248,True,False,False,False
+cam4_9999190306024320199.tif,0.6674745082855225,True,False,False,False
+cam4_9999190306024329203.tif,0.657515287399292,True,True,False,False
+cam4_9999190306025445394.tif,0.6546423435211182,True,False,False,False
+cam4_9999190306025550427.tif,0.6581747531890869,True,False,False,False
+cam4_9999190306025905467.tif,0.6615016460418701,True,False,True,False
+cam4_9999190306025932479.tif,0.6559324264526367,True,False,False,False
+cam4_9999190306030720561.tif,0.6544110774993896,True,True,False,False
+cam4_9999190306031549711.tif,0.666264533996582,True,False,False,False
+cam4_9999190306031718755.tif,0.6602728366851807,True,False,False,False
+cam4_9999190306031927791.tif,0.6688861846923828,True,False,False,False
+cam4_9999190306032103827.tif,0.733410120010376,True,False,False,False
+cam4_9999190306032149848.tif,0.6715166568756104,True,True,False,False
+cam4_9999190306032317868.tif,0.6797943115234375,True,True,False,False
+cam4_9999190306033340136.tif,0.6655247211456299,True,False,False,False
+cam4_9999190306033917188.tif,0.6554176807403564,True,False,False,False
+cam4_9999190306033933196.tif,0.673652172088623,True,False,False,False
+cam4_9999190306034700372.tif,0.6632101535797119,True,True,False,False
+cam4_9999190306034942456.tif,0.6916899681091309,True,False,False,False
+cam4_9999190306035113497.tif,0.6911351680755615,True,True,False,False
+cam4_9999190306040301782.tif,0.7164955139160156,True,False,False,False
+cam4_9999190306042116216.tif,0.6754205226898193,True,False,False,False
+cam4_9999190306042258256.tif,0.6570713520050049,True,False,False,False
+cam4_9999190306042336272.tif,0.7285082340240479,True,False,False,False
+cam4_9999190306042919408.tif,0.6654975414276123,True,False,False,False
+cam4_9999190306043231488.tif,0.6700143814086914,True,False,False,False
+cam4_9999190306043335512.tif,0.6592166423797607,True,False,False,False
+cam4_9999190306045124708.tif,0.6836860179901123,True,False,False,False
+cam4_9999190306045456765.tif,0.6759922504425049,True,False,False,False
+cam4_9999190306045520777.tif,0.6774215698242188,True,False,False,False
+cam4_9999190306045727842.tif,0.6796135902404785,True,True,False,False
+cam4_9999190306050433028.tif,0.6848506927490234,True,False,False,False
+cam4_9999190306051038177.tif,0.6700751781463623,True,False,False,False
+cam4_9999190306051201209.tif,0.6790101528167725,True,False,False,False
+cam4_9999190306051258233.tif,0.6745548248291016,True,False,False,False
+cam4_9999190306051528294.tif,0.6794149875640869,True,False,False,False
+cam4_9999190306051701330.tif,0.6689355373382568,True,False,False,False
+cam4_9999190306051758354.tif,0.6758067607879639,True,False,False,False
+cam4_9999190306052605478.tif,0.6828336715698242,True,False,False,False
+cam4_9999190306052759534.tif,0.6874463558197021,True,False,False,False
+cam4_9999190306053412651.tif,0.6762487888336182,True,False,False,False
+cam4_9999190306054246883.tif,0.6838996410369873,True,False,False,False
+cam4_9999190306054800935.tif,0.675957441329956,True,False,False,False
+cam4_9999190306054921971.tif,0.6782519817352295,True,False,False,False
+cam4_9999190306060139291.tif,0.6685426235198975,True,False,False,False
+cam4_9999190306060359347.tif,0.6788735389709473,True,False,False,False
+cam4_9999190306060629404.tif,0.6701498031616211,True,False,False,False
+cam4_9999190306060803445.tif,0.681736946105957,True,False,False,False
+cam4_9999190306061514617.tif,0.6816127300262451,True,False,False,False
+cam4_9999190306061724670.tif,0.6818759441375732,True,False,False,False
+cam4_9999190306061935723.tif,0.6775186061859131,True,False,False,False
+cam4_9999190306062205783.tif,0.6761837005615234,True,False,False,False
+cam4_9999190306062516857.tif,0.6731886863708496,True,False,False,False
+cam4_9999190306062525861.tif,0.6837818622589111,True,False,False,False
+cam4_9999190306063151006.tif,0.6900055408477783,True,False,False,False
+cam4_9999190306063746163.tif,0.6817443370819092,True,False,False,False
+cam4_9999190306063853191.tif,0.6697807312011719,True,False,False,False
+cam4_9999190306064227272.tif,0.6759493350982666,True,False,False,False
+cam4_9999190306064648376.tif,0.6762466430664062,True,False,False,False
+cam4_9999190306065238514.tif,0.6671316623687744,True,False,False,False
+cam4_9999190306070926586.tif,0.6868007183074951,True,True,False,False
+cam4_9999190306071719695.tif,0.684476375579834,True,True,False,False
+cam4_9999190306072049771.tif,0.6775438785552979,True,True,False,False
+cam4_9999190306072100775.tif,0.6688780784606934,True,False,False,False
+cam4_9999190306074125200.tif,0.6827495098114014,True,False,False,False
+cam4_9999190306074220228.tif,0.6761419773101807,True,False,False,False
+cam4_9999190306074907268.tif,0.6809263229370117,True,False,False,False
+cam4_9999190306075305388.tif,0.6863706111907959,True,False,False,False
+cam4_9999190306075412420.tif,0.7220914363861084,True,False,False,False
+cam4_9999190306080540681.tif,0.7357068061828613,True,False,False,False
+cam4_9999190306081204819.tif,0.7298438549041748,True,False,False,False
+cam4_9999190306083211257.tif,0.7236104011535645,True,False,False,False
+cam4_9999190306092321236.tif,0.6945858001708984,True,False,False,False
+cam4_9999190306111119530.tif,0.6832025051116943,True,False,False,False
+cam4_9999190314075811861.tif,0.6791880130767822,True,True,False,False
+cam4_9999190314081140049.tif,0.6843421459197998,True,True,False,False
+cam4_9999190314081305085.tif,0.6797318458557129,True,True,False,False
+cam4_9999190314081803183.tif,0.6734054088592529,True,True,False,False
+cam4_9999190314081853207.tif,0.6839869022369385,True,True,False,False
+cam4_9999190314082242323.tif,0.6727120876312256,True,True,False,False
+cam4_9999190314082258331.tif,0.6731300354003906,True,True,False,False
+cam4_9999190314082306335.tif,0.6917166709899902,True,True,False,False
+cam4_9999190320112053788.tif,0.6698336601257324,True,True,False,False
+cam4_9999190320143116505.tif,0.6764774322509766,True,True,False,False
+cam4_9999190320143144519.tif,0.6713120937347412,True,True,False,False

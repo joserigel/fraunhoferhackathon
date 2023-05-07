@@ -337,9 +337,9 @@ class Image:
 
         data = np.extract(img_masked>0,img_masked)
 
-        std_dev = int(np.std(data))
+        std_dev = np.std(data)
 
-        return std_dev
+        return int(std_dev)
         
         
     def grid_detect(self):
@@ -501,3 +501,6 @@ class Image:
 if __name__ == "__main__":
 
     image_directory = ""
+    image = 'test2.tif'
+    i = Image(image)
+    # print(i.grid_silver)
