@@ -9,7 +9,7 @@ Mat = np.ndarray[int, np.dtype[np.generic]]
 
 
 class Image:
-    def __init__(self, filename: str,grid_threshold=580):
+    def __init__(self, filename: str,grid_threshold=450):
         self.cwd = os.getcwd()
         self.filename = filename
         self.image_8_bit = self.load_image(is_8bit=True)
@@ -26,6 +26,7 @@ class Image:
             "left": np.sum(blackspot[1],axis=2)
         }
 
+        self.teeth_isdefect = (False,False)
         # teeth
         teeth = self.teeth_detect()
         self.teeth = {
@@ -34,8 +35,8 @@ class Image:
         }
         
         mask,img = self.grid_detect()
-        self.grid_silver = self.grid_silver(mask,img)
-        self.grid_black = self.grid_black(mask,img)
+        self.grid_silver,self.grid_silver_value = self.grid_silver(mask,img)
+        self.grid_black,self.grid_value = self.grid_black(mask,img)
         
         self.processed_image = self.combine_image()
 
@@ -105,9 +106,6 @@ class Image:
         if isBottom:
             pic = self.crop_image_8_bit[-20:-5, 78:-77]
 
-        # blurs template to remove small spots
-        #pic = cv.GaussianBlur(pic, (1, ), 0)
-        # make picture brighter
         pic = cv.GaussianBlur(pic, (5, 5), 0)
         pic = cv.convertScaleAbs(pic, 1, 5)
         pic = cv.addWeighted(pic, 3, pic, 0, 10)
@@ -116,7 +114,7 @@ class Image:
         pic = np.invert(pic)
         pic = cv.cvtColor(pic, cv.COLOR_GRAY2RGBA)
         mask = mask[:15,:1183]
-        #mask = cv.GaussianBlur(mask, (5, 5), 0)
+
         
         pic = cv.subtract(pic, mask)
 
@@ -381,7 +379,6 @@ class Image:
         data = mx[mx.mask == False]
 
         res = np.count_nonzero(data > av-0.5*std_dev)
-
         maske_arr = np.array(mask_dil, dtype=bool)
         raw = np.multiply(maske_arr, img)
         heat = np.array( (raw > av-0.5*std_dev)*255, dtype=np.uint8)
@@ -392,7 +389,7 @@ class Image:
 
         img_dilation = np.subtract(img_dilation_border,img_dilation)
         
-        return img_dilation
+        return img_dilation,res
     
     @staticmethod
     def remove_small_regions(image,thresh):
@@ -446,10 +443,12 @@ class Image:
         top_side = self.detect_side_tb(False)
         bottom_side = self.detect_side_tb(True)
 
-        if self.defect_valid(top_side):
+        self.teeth_isdefect = (self.defect_valid(top_side),self.defect_valid(bottom_side))
+        
+        if self.teeth_isdefect[0]:
             top_side = self.check_area(top_side)
 
-        if self.defect_valid(bottom_side):
+        if self.teeth_isdefect[1]:
             bottom_side = self.check_area(bottom_side)
 
         return (top_side, bottom_side)
