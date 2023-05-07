@@ -35,7 +35,7 @@ class Image:
         }
         
         mask,img = self.grid_detect()
-        self.grid_silver,self.grid_silver_value = self.grid_silver(mask,img)
+        self.grid_silver = self.grid_silver(mask,img)
         self.grid_black,self.grid_value = self.grid_black(mask,img)
         
         self.processed_image = self.combine_image()
@@ -331,9 +331,15 @@ class Image:
         cv.drawContours(mask_dil, [triangle_cnt], 0, 0, -1)
         
         img_masked = np.multiply(mask_dil,img)
-        cv.imwrite("img_mask.png",img_masked)
-        
-        return mask_dil
+        mask_dil_strong = cv.erode(mask_dil, kernel, iterations=2)
+
+
+
+        data = np.extract(img_masked>0,img_masked)
+
+        std_dev = int(np.std(data))
+
+        return std_dev
         
         
     def grid_detect(self):
@@ -495,13 +501,3 @@ class Image:
 if __name__ == "__main__":
 
     image_directory = ""
-    output_directory = ""
-    test = Image('test.tif')
-    print(test.get_dim(test.grid_silver))
-    cv.imshow("",test.grid_silver)
-    cv.imshow("s",test.grid_black)
-    print(test.get_dim(test.grid_black))
-    res = np.add(test.grid_black,test.grid_silver)
-    cv.imshow('res',res)
-    cv.waitKey(0)
-    cv.destroyAllWindow()
