@@ -131,14 +131,14 @@ def scan_line(image_blurred, image):
     valleys_x, _ = find_peaks(-x_sum, distance=10, prominence=20000)
     valleys_y, _ = find_peaks(-y_sum, distance=10, prominence=20000)
 
-    valleys_x = valleys_x[1:-1]
-    valleys_y = valleys_y[1:-1]
+    #valleys_x = valleys_x[1:-1]
+    #valleys_y = valleys_y[1:-1]
 
 
     ##### X Abschnitte
 
     a = np.extract((np.logical_and(valleys_x > 0, valleys_x <= 75)), valleys_x)
-    draw_line_topl_br(a, full_img_45, image_s, 7)
+    draw_line_topl_br(a, full_img_45, image_s, 12)
 
     a = np.extract((np.logical_and(valleys_x > 75, valleys_x <= 148)), valleys_x)
     draw_line_topl_br(a, full_img_45, image_s, 6)
@@ -162,14 +162,14 @@ def scan_line(image_blurred, image):
     draw_line_topl_br(a, full_img_45, image_s, 6)
 
     a = np.extract(np.logical_and(valleys_x > 960, valleys_x <= 1050), valleys_x)
-    draw_line_topl_br(a, full_img_45, image_s, 7)
+    draw_line_topl_br(a, full_img_45, image_s, 12)
 
     ##### YAbschnitte
 
 
 
     a = np.extract((np.logical_and(valleys_y > 0, valleys_y <= 75+20)), valleys_y)
-    draw_line_bl_topr(a, full_img_45, image_s, 7)
+    draw_line_bl_topr(a, full_img_45, image_s, 12)
 
     a = np.extract((np.logical_and(valleys_y > 75, valleys_y <= 148)), valleys_y)
     draw_line_bl_topr(a, full_img_45, image_s, 6)
@@ -193,7 +193,7 @@ def scan_line(image_blurred, image):
     draw_line_bl_topr(a, full_img_45, image_s, 6)
 
     a = np.extract(np.logical_and(valleys_y > 960, valleys_y <= 1050), valleys_y)
-    draw_line_bl_topr(a, full_img_45, image_s, 7)
+    draw_line_bl_topr(a, full_img_45, image_s, 12)
 
 
 
@@ -282,8 +282,25 @@ def analyze_grid(filename,main_folder):
 
     return None
     """
+    mask_dil = line_mask
+    mask_h, mask_w = mask_dil.shape
 
-    line_mask= line_mask
+    #Top Left
+    triangle_cnt = np.array([(0,0), (125,0), (0,125)])
+    cv2.drawContours(mask_dil, [triangle_cnt], 0, 0, -1)
+
+    # Top Right
+    triangle_cnt = np.array([(mask_w, 0), (mask_w-125, 0), (mask_w, 125)])
+    cv2.drawContours(mask_dil, [triangle_cnt], 0, 0, -1)
+
+    # Bot. Left
+    triangle_cnt = np.array([(0, mask_h), (125, mask_h), (0, mask_h - 125)])
+    cv2.drawContours(mask_dil, [triangle_cnt], 0, 0, -1)
+
+    # Bot. Right
+    triangle_cnt = np.array([(mask_w, mask_h), (mask_w - 125, mask_h), (mask_w,mask_h- 125)])
+    cv2.drawContours(mask_dil, [triangle_cnt], 0, 0, -1)
+
 
 
 
@@ -296,9 +313,9 @@ def analyze_grid(filename,main_folder):
     std_dev = np.std(data)
     av = np.average(data)
 
-    #plt.imshow(img, cmap='gray')  # I would add interpolation='none'
-    #plt.imshow(line_mask, cmap=colors, alpha=0.5 * (line_mask > 0))  # interpolation='none'
-    #plt.show()
+    plt.imshow(img, cmap='gray')  # I would add interpolation='none'
+    plt.imshow(line_mask, cmap=colors, alpha=0.5 * (line_mask > 0))  # interpolation='none'
+    plt.show()
 
 
 
@@ -332,11 +349,11 @@ def analyze_grid(filename,main_folder):
         plt.show()
 
     return res
-"""
 
+"""
 def analyze_silver(mask,img):
-    img = img[10:-10, 10:-10]
-    mask = mask[10:-10, 10:-10]
+    #img = img[10:-10, 10:-10]
+    #mask = mask[10:-10, 10:-10]
 
     mask =  np.array(mask, dtype=np.uint8)
     kernel = np.ones((3, 3), np.uint8)
@@ -346,19 +363,19 @@ def analyze_silver(mask,img):
     mask_h, mask_w = mask_dil.shape
 
     #Top Left
-    triangle_cnt = np.array([(0,0), (100,0), (0,100)])
+    triangle_cnt = np.array([(0,0), (125,0), (0,125)])
     cv2.drawContours(mask_dil, [triangle_cnt], 0, 0, -1)
 
     # Top Right
-    triangle_cnt = np.array([(mask_w, 0), (mask_w-100, 0), (mask_w, 100)])
+    triangle_cnt = np.array([(mask_w, 0), (mask_w-125, 0), (mask_w, 125)])
     cv2.drawContours(mask_dil, [triangle_cnt], 0, 0, -1)
 
     # Bot. Left
-    triangle_cnt = np.array([(0, mask_h), (100, mask_h), (0, mask_h - 100)])
+    triangle_cnt = np.array([(0, mask_h), (125, mask_h), (0, mask_h - 125)])
     cv2.drawContours(mask_dil, [triangle_cnt], 0, 0, -1)
 
     # Bot. Right
-    triangle_cnt = np.array([(mask_w, mask_h), (mask_w - 100, mask_h), (mask_w,mask_h- 100)])
+    triangle_cnt = np.array([(mask_w, mask_h), (mask_w - 125, mask_h), (mask_w,mask_h- 125)])
     cv2.drawContours(mask_dil, [triangle_cnt], 0, 0, -1)
 
 
