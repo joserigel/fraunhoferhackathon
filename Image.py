@@ -1,11 +1,10 @@
 import cv2 as cv
-import matplotlib.pyplot as plt
 import os
 import numpy as np
-from scipy import ndimage,datasets
+from scipy import ndimage
 from scipy.signal import find_peaks, peak_widths
 from scipy.interpolate import splrep, BSpline
-import time
+
 Mat = np.ndarray[int, np.dtype[np.generic]]
 
 
@@ -19,8 +18,7 @@ class Image:
         self.crop_image_12_bit = self.crop_grid(top_left)
         self.grid_threshold = grid_threshold
         self.grid_value = 0
-
-        time0 = time.time()
+        self.blackspot_isdefect = (False, False)
         # blackspot
         blackspot = self.blackspot_detect()
         self.blackspot = {
@@ -40,7 +38,6 @@ class Image:
         self.grid_black = self.grid_black(mask,img)
         
         self.processed_image = self.combine_image()
-        print(time.time()-time0)
 
     def load_image(self, is_8bit=False) -> Mat:
         """
@@ -435,10 +432,13 @@ class Image:
         right_side = self.detect_side_lr(False)
         left_side = self.detect_side_lr(True)
 
-        if self.defect_valid(right_side):
+        self.blackspot_isdefect = (self.defect_valid(right_side),self.defect_valid(left_side))
+        
+        if self.blackspot_isdefect[0]:
             right_side = self.check_area(right_side)
 
-        if self.defect_valid(left_side):
+        
+        if self.blackspot_isdefect[1]:
             left_side = self.check_area(left_side)
         return (right_side, left_side)
 
