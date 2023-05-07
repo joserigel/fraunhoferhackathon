@@ -12,3 +12,5 @@ imgs/
 *.png
 *.tif
 data.csv
+result.csv
+result/
