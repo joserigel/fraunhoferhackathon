@@ -48,16 +48,21 @@ res = []
 
 
 for i in tqdm(preprocessed_data):
-    res.append(analyze_grid(i["path"], main_folder) )
-    print(i["label"])
+    if(i["label"]=="silver_defect"):
+        res.append(analyze_grid(i["path"], main_folder) )
 
-np.save(counts_file,res)
+
+#np.save(counts_file,res)
 
 counts = np.load(counts_file)
 
+a = np.count_nonzero((counts < 580))/counts.size
+
+print(a)
+
 fig, (ax1) = plt.subplots(1,1, sharex=True, sharey=True)
 fig.suptitle('Vertically stacked subplots')
-ax1.hist(counts, density=True, bins=200)  # density=False would make counts
+ax1.hist(counts, density=True, bins=500)  # density=False would make counts
 
 plt.show()
 
